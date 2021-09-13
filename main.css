@@ -1,0 +1,38 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    place-content: center;
+    text-align: center;
+    display:grid;
+}
+
+
+
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+h1::before {
+    background:rgb(33, 29, 61);
+    animation:typewriter 2s steps(9) 1s forwards;
+}
+
+h1::after {
+    width: 0.125em;
+    background: white;
+    animation:typewriter 2s steps(9) 1s forwards, blink 750ms steps(9) infinite
+}
+
+@keyframes typewriter {
+    to { left:100%; }
+}
+
+@keyframes blink {
+    to { background:transparent;}
+}
