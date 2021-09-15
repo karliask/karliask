@@ -7,6 +7,11 @@ body {
 }
 
 
+h1 { 
+    text-align: center;
+    width: max-content;
+    position: relative;
+}
 
 h1::before,
 h1::after {
@@ -19,7 +24,7 @@ h1::after {
 }
 
 h1::before {
-    background:rgb(33, 29, 61);
+    background:#1d1e28;
     animation:typewriter 2s steps(9) 1s forwards;
 }
 
@@ -29,6 +34,161 @@ h1::after {
     animation:typewriter 2s steps(9) 1s forwards, blink 750ms steps(9) infinite
 }
 
+.info {
+    animation: animup 3s ease forwards;
+    animation-delay: 3.9s
+    
+}
+
+.info2 {
+    animation: animup 3s ease forwards;
+    animation-delay: 4.1s
+    
+}
+
+.info3 {
+    animation: animup 3s ease forwards;
+    animation-delay: 4.3s
+    
+}
+
+.info4 {
+    animation: animup 3s ease forwards;
+    animation-delay: 4.5s
+    
+}
+
+.info5 {
+    animation: animr 3s ease forwards;
+    animation-delay: 4.9s
+    
+}
+
+.infofaq {
+    animation: animup 3s ease forwards;
+    animation-delay: 3s
+}
+
+.infofaq2 {
+    animation: animup 3s ease forwards;
+    animation-delay: 3.2s
+}
+
+.infofaq3 {
+    animation: animup 3s ease forwards;
+    animation-delay: 3.4s
+}
+
+.infofaq4 {
+    animation: animup 3s ease forwards;
+    animation-delay: 3.6s
+}
+
+.infofaq5 {
+    animation: animup 3s ease forwards;
+    animation-delay: 3.8s
+}
+
+.infofaq6 {
+    animation: animup 3s ease forwards;
+    animation-delay: 4s
+}
+
+.infofaq7 {
+    animation: animup 3s ease forwards;
+    animation-delay: 4.2s
+}
+
+
+#table1 {
+    animation: animationup 3s linear forwards;
+    animation-delay: 0.2s
+}
+#table2 {
+    animation: animationup 3s linear forwards;
+    animation-delay: 0.4s
+}
+#table3 {
+    animation: animationup 3s linear forwards;
+    animation-delay: 0.6s
+}
+#table4 {
+    animation: animationup 3s linear forwards;
+    animation-delay: 0.8s
+}
+
+table {
+    opacity:0
+}
+
+.gega { 
+    text-align: center;
+    width: max-content;
+    position: relative;
+}
+
+.gega::before,
+.gega::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+.gega::before {
+    background:#1d1e28;
+    animation:typewriter 2s steps(4) 1s forwards;
+}
+
+.gega::after {
+    width: 0.125em;
+    background: white;
+    animation:typewriter 2s steps(4) 1s forwards, blink 750ms steps(4) infinite
+}
+
+.sure {
+    color: #ad2d2f;
+}
+
+.sure:hover {
+    color: #ac492f
+}
+
+.here {
+    color: #ad2d2f;
+}
+
+.here:hover {
+    color: #ac492f
+}
+
+.div {
+    display:grid;
+}
+
+.div p {
+    margin:auto;
+}
+
+
+#here {
+    color: #ad2d2f;
+}
+
+#here:hover {
+    color: #ac492f
+}
+
+#content {
+    text-align:center;
+}
+
+#pfp {
+    animation: animr 3s forwards
+}
+
 @keyframes typewriter {
     to { left:100%; }
 }
@@ -36,3 +196,48 @@ h1::after {
 @keyframes blink {
     to { background:transparent;}
 }
+
+@keyframes animup {
+    from {
+        opacity: 0;
+        margin-botttom: 100%;
+    }
+    to {
+        opacity: 1;
+        margin-bottom: 0%;
+    }
+}
+
+@keyframes animationup {
+    from {
+        opacity: 0;
+        margin-botttom: 100%;
+    }
+    to {
+        opacity: 1;
+        margin-bottom: 0%;
+    }
+}
+
+@keyframes animr {
+    from{ 
+        opacity:0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ad2d2f;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #c07f5f;
+    border-radius: 10px;
+  }
