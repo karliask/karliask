@@ -15,7 +15,7 @@ body {
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    width: 580px;
+    width: 58vw; /*580px*/
     display: flex;
     box-shadow: 0 1px 20px 0 #ad2d2f
 }
@@ -40,7 +40,7 @@ body {
 }
 
 .wrapper .left p{
-    font-size:12px
+    font-size:1vw /*12 px*/
 }
 
 .wrapper .right {
@@ -85,7 +85,7 @@ body {
 
 .wrapper .right .info_data .data p,
 .wrapper .right .proyects_data .data p {
-    font-size: 20px;
+    font-size: 2vw; /*20px*/
     margin-bottom: 2px;
 }
 
