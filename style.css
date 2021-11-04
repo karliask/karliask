@@ -3,6 +3,10 @@
     font-family: 'Source Code Pro', monospace;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -14,6 +18,16 @@ body{
     margin: 10% auto 0;
     width: 50%;
     height: 400px;
+    background: linear-gradient(45deg, rgb(15, 15, 15), rgb(22, 22, 22));
+    border-radius: 5px;
+    min-width: 320px;
+}
+
+.block2 {
+    position: relative;
+    margin: 10% auto 0;
+    width: 50%;
+    height: 200px;
     background: linear-gradient(45deg, rgb(15, 15, 15), rgb(22, 22, 22));
     border-radius: 5px;
     min-width: 320px;
@@ -31,6 +45,21 @@ body{
     z-index: -1;
     border-radius: 5px;
     animation: animate 15s linear infinite;
+    filter:blur(30px);
+}
+
+.glow2::before , glow2::after{
+    content:'';
+    position:absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #ff0099, #ff00ff, #5e0dd0, #5e0dd0, #ff00ff, #ff0099, #7737a8, #6c39be, #7737a8, #ff0099, #ff00ff, #5e0dd0, #5e0dd0, #ff00ff, #ff0099);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    border-radius: 5px;
+    animation: animate2 15s linear infinite;
     filter:blur(30px);
 }
 
@@ -130,29 +159,43 @@ ul li:nth-child(2):hover{
 }
 
 ul li:nth-child(3)::before{
-    background: #5865f2;
+    background: #1ca0f1;
 }
 
 ul li:nth-child(3):hover::before{
-    box-shadow: 0 0 15px #5865f2;
+    box-shadow: 0 0 15px #1ca0f1;
 }
 
 ul li:nth-child(3):hover{
+    color: #1ca0f1;
+    box-shadow: 0 0 15px #1ca0f1;
+    text-shadow: 0 0 15px #1ca0f1;
+}
+
+ul li:nth-child(4)::before{
+    background: #5865f2;
+}
+
+ul li:nth-child(4):hover::before{
+    box-shadow: 0 0 15px #5865f2;
+}
+
+ul li:nth-child(4):hover{
     color: #5865f2;
     box-shadow: 0 0 15px #5865f2;
     text-shadow: 0 0 15px #5865f2;
 }
 
 
-ul li:nth-child(4)::before{
+ul li:nth-child(5)::before{
     background: linear-gradient(180deg, #04070c, #0d86b6);
 }
 
-ul li:nth-child(4):hover::before{
+ul li:nth-child(5):hover::before{
     box-shadow: 0 0 15px linear-gradient(180deg, #04070c, #0d86b6);
 }
 
-ul li:nth-child(4):hover{
+ul li:nth-child(5):hover{
     color: #f9fcfe;
     box-shadow: 0 0 15px linear-gradient(180deg, #04070c, #0d86b6);
     text-shadow: 0 0 15px linear-gradient(180deg, #04070c, #0d86b6);
@@ -175,11 +218,17 @@ ul li:hover::before{
     }
 
     50%{
-        background-position: 400% 0;
+        background-position: 200% 0;
+    }
+}
+
+@keyframes animate2{
+    0%{
+        background-position: 0 0;
     }
 
-    100%{
-        background-position: 0 0;
+    50%{
+        background-position: 400% 0;
     }
 }
 
@@ -188,3 +237,19 @@ ul li:hover::before{
         margin-bottom: 10px
     }
 }
+
+::-webkit-scrollbar{
+    width: 15px;
+    height: 15px;
+    }
+    ::-webkit-scrollbar-thumb{
+    background: #15161f;
+    border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+    background: #15161f;
+    }
+    ::-webkit-scrollbar-track{
+    background: #15161f;
+    box-shadow: inset 7px 10px 12px 0px #15161f;
+    }
