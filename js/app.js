@@ -23,7 +23,7 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#b34343"
       },
       "shape": {
         "type": "circle",
@@ -70,7 +70,7 @@ particlesJS('particles-js',
       "move": {
         "enable": true,
         "speed": 6,
-        "direction": "bottom",
+        "direction": "top",
         "random": true,
         "straight": false,
         "out_mode": "out",
