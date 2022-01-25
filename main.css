@@ -95,6 +95,16 @@ p{
     animation: hoveranimate 1.3s forwards;
 }
 
+.instagram{
+    color: #af916f;
+    font-size: 22px;
+    animation: nothoveranimate 1.3s forwards;
+}
+
+.instagram:hover{
+    animation: hoveranimate 1.3s forwards;
+}
+
 .discord{
     color: #af916f;
     font-size: 22px;
@@ -105,15 +115,6 @@ p{
     animation: hoveranimate 1.3s forwards;
 }
 
-.instagram{
-    color: #af916f;
-    font-size: 22px;
-    animation: nothoveranimate 1.3s forwards;
-}
-
-.instagram:hover{
-    animation: hoveranimate 1.3s forwards;
-}
 
 .com{
     font-size: 15px
