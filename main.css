@@ -17,7 +17,7 @@ body{
 }
 
 p{
-    color:#af916f;
+    color:#b49979;
 }
 
 /*ID'S*/
@@ -57,7 +57,7 @@ p{
 
 .profile{
     position: relative;
-    margin: 10% auto 0;
+    margin: 6% auto 0;
     width: 50%;
     height: 400px;
     min-width: 320px;
