@@ -1,0 +1,45 @@
+.last_line {
+	background-color: rgb(177, 177, 177);
+	border-radius: 8px;
+	font-weight: bolder;
+	}
+
+.title {
+	background-color: rgb(177, 177, 177); /*cum colour*/
+	border-radius: 10px;
+	text-align: center;
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	background: linear-gradient(to bottom, rgb(53, 48, 48), rgb(51, 48, 61));
+}
+
+
+th {
+	border: 1px solid black;
+}
+
+#S{
+	background-color: rgb(247, 75, 75);
+}
+
+#A{
+	background-color: rgb(230, 173, 69);
+}
+
+#B{
+	background-color: rgb(243, 243, 83);
+}
+
+#C{
+	background-color: rgb(47, 161, 47);
+}
+
+#D{
+	background-color: rgb(109, 145, 223);
+}
+
+#F{
+	background-color: rgb(62, 62, 235);
+}
