@@ -12,13 +12,30 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background-image: url("images/wallpaper.jpg");
+   background-image: url("images/background.png");
     background-repeat: no-repeat;
 }
 
 p{
-    color:#b49979;
+    color:#c7aa84;
 }
+
+
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0);
+  }
 
 /*ID'S*/
 
