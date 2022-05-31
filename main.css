@@ -19,11 +19,11 @@ body{
 p{
     color:#c7aa84;
 }
-/*el pe*/
+/*el pep*/
 
 
 ::-webkit-scrollbar {
-    width: 1px;
+    width: 0px;
   }
   
   ::-webkit-scrollbar-track {
