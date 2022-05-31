@@ -12,7 +12,6 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background-image: url("images/background.png");
     background-repeat: no-repeat;
 }
 
@@ -22,21 +21,7 @@ p{
 /*el pep*/
 
 
-::-webkit-scrollbar {
-    width: 0px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0);
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0);
-  }
+
 
 /*ID'S*/
 
