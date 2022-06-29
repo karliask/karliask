@@ -1,0 +1,57 @@
+*{
+    font-family: 'Space Mono', monospace;
+    color: #403938
+}
+
+body{  
+    background: linear-gradient(to right,rgb(201, 45, 58),rgb(220, 79, 90), rgb(201, 45, 58));
+    color: #403938
+}
+
+#timer{
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#start{
+    font-size: 35px;
+    border-radius: 20px;
+    background-color: rgba(10, 10, 10, 0);
+    border: 3px solid rgb(141, 200, 69);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#bar{
+    border-top: 2px solid #403938;
+    display: flex;
+    width: 23%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 36%;
+}
+
+@keyframes test{
+    from{
+        width: 23%;
+    }
+    to{
+        width: 0%
+    }
+}
