@@ -10,7 +10,7 @@ body{
 }
 
 #resultLabel{
-    font-size: 100px;
+    font-size: 60px;
     color: rgb(227, 227, 227);
     animation: animation 2s ease-in forwards
 }
