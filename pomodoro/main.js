@@ -10,13 +10,15 @@ function play() {
   audio.play();
 }
 
+
+
 function recess(){
     minute = 4; // estaba en 4
     sec = 59;
+    bar.style.animation =  'test 300s linear';
     let recessInterval = setInterval(function() {
       timer.innerHTML = minute + ":" + sec;
       timer.innerHTML.substring(1)
-      bar.style.animation =  'test 300s linear forwards';
       sec--;
       if (sec == 9 || sec == 8 || sec == 7 || sec == 6 || sec == 5 || sec == 4 || sec == 3 || sec == 2 || sec == 1 || sec == 0){
         sec = "0" + sec;}
@@ -60,15 +62,15 @@ function timerCheck(){
     if(num == 0){
         num++
         work()
-        bar.style.animation =  'test 1500s linear forwards';}
+        bar.style.animation =  'test 1500s linear';}
     else{
-        clearInterval(work())
-        num--
-    }
-}
+        num++
+    }}
 
-document.addEventListener('keyup', event => {
-  if (event.code === 'Space') {
-    timerCheck()
-  }
-})
+
+    document.addEventListener('keyup', event => {
+      if (event.code === 'Space') {
+        timerCheck()
+      }
+    });
+    

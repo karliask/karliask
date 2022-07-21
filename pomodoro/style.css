@@ -1,6 +1,7 @@
 *{
     font-family: 'Space Mono', monospace;
-    color: #403938
+    color: #403938;
+    user-select: none;
 }
 
 body{  
@@ -19,6 +20,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    user-select: none;
 }
 
 #start{

@@ -1,37 +1,64 @@
-/*let spanish = {
-    arg: "Orgullosa argentina",
-    abt: "<b>Holaa, soy karliask</i> :D <br> Soy una desarrolladora web, gamer y furry. <br><br> Mas que nada juego roguelikes como Spelunky 2<br> o TBOI pero tambien juego Minecraft y Forager.<br><br>Siempre tengo mis MD abiertos, asi que no tengas miedo de decir hola!</b>"
+function createKarliask() { 
+    var karliask = new Person();
+
+    karliask.setName("karliask");
+    karliask.setBio("dev @seesonss, dev @Peereira7 mod @ Team Heretics");
+    karliask.setNicknames(["karliask", "karl"]);
+    karliask.setLocation("Ciudad Autonoma de Buenos Aires, Argentina");
+
+    /* spending my time on */
+    karliask.addActivity({ name: "100DaysOfCode", link: "https://discord.gg/peereira7" });
+    karliask.addActivity({ name: "Personal Projects"});
+    karliask.addActivity({ name: "Team Heretics", role: "mod", link: "https://discord.gg/teamheretics" });
+    karliask.addJob({ name: "seesonss", role: "dev", link: "https://discord.gg/seesonss" });
+    karliask.addJob({ name: "danoninomb.es", role: "dev", link: "https://danoninomb.es" });
+
+    /* contact me on */
+    karliask.addContact({ name: "discord", link: "https://twitter.com/danonino_mb" });
+    karliask.addContact({ name: "steam", link: "https://discord.gg/user/danonino.mb ツ" });
+    karliask.addContact({ name: "instagram", link: "https://instagram.com/danonino.mb" });
+    karliask.addContact({ name: "twitter", link: "https://github.com/danonino-mb" });
 }
 
-let english = {
-    arg: "Proud argentinian",
-    abt: "<b>Heyy I'm <i>karliask</i> :D <br> Im a Web developer, a gamer and a furry. <br><br> I play mostly roguelikes games such as Spelunky 2<br> or TBOI but i also play Minecraft and Forager.<br><br>I always have my DMs open, so don't be scared!</b>"
+// Make the DIV element draggable:
+
+const terminal = document.getElementById("terminal");
+const body = document.querySelector("body");
+const a = document.querySelector("a");
+
+function closemin(){
+    terminal.style.animation = "animopen 0.1s linear forwards";
+    body.style.userSelect = "none";
+    let sec = 3;
+    setInterval(function() {
+          sec--;
+          if (sec == -1) {
+            window.location.reload()
+          }
+        }, 1000);
 }
 
-var lang = english;
-let count = 0
-
-document.getElementById("change").onclick = function() {
-    count += 1;
-    if(count < 1 && count != 1){
-    lang = english;  
-    document.getElementById("arg").innerHTML = lang.arg;
-    document.getElementById("texto").innerHTML = lang.abt;
+function minimize(){
+  terminal.style.animation = "animmin 0.1s linear forwards";
+  body.style.userSelect = "none";
+  let sec = 3;
+  setInterval(function() {
+        sec--;
+        if (sec == -1) {
+          window.location.reload()
+        }
+      }, 1000);
 }
-    else if(count = 1){
-        lang = spanish;  
-        document.getElementById("arg").innerHTML = lang.arg;
-        document.getElementById("texto").innerHTML = lang.abt;
-    }
+
+function log2(){
+    terminal.style.animation = "shake 0.75s ease-in-out";
+    let sec = 1;
+    setInterval(function() {
+          sec--;
+          if (sec == -1) {
+            terminal.removeAttribute("style");
+          }
+        }, 1000);
     
-    else{
-        lang = english;
-        document.getElementById("arg").innerHTML = lang.arg;
-        document.getElementById("texto").innerHTML = lang.abt;
-    }
-    
+    console.log("funca2")
 }
-
-
-console.log(count)
-*/
