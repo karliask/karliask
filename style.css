@@ -38,30 +38,24 @@ body{
 .insideterminal{
     padding: 1rem
 }
+
+*::selection{
+    filter: invert(100%);
+}
 /*---------------------------*/
 #funcparam{
     color: #12b4d1;
 }
 
-#funcparam::selection{
-    color: #ed4b2e
-}
 /*---------------------------*/
 #varkarl{
     color: #c22e50;
-}
-
-#varkarl::selection{
-    color: #3dd1af
 }
 /*---------------------------*/
 #strings{
     color: #00a581;
 }
 
-#strings::selection{
-    color: #ff5a7e
-}
 
 a:link{
     color: #00a581;
@@ -91,33 +85,21 @@ a:link::selection{
     color: #c38e0c;
 }
 
-#yellowstuff::selection{
-    color: #3c71f3
-}
 /*---------------------------*/
 #parenthesis{
     color: #835de0;
 }
 
-#parenthesis::selection{
-    color: #7ca21f
-}
 /*---------------------------*/
 #comments{
     color: #42464b;
 }
 
-#comments::selection{
-    color: #bdb9b4
-}
 /*---------------------------*/
 #attributes{
     color: #afb3b3;
 }
 
-#attributes::selection{
-    color: #504c4c;
-}
 /*---------------------------*/
 #spaces{
     margin-left: 3%
@@ -235,8 +217,3 @@ a:link::selection{
     }
     
   }
-    
-*::selection{
-    background-color: #eeebe7;
-}
-
