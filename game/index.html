@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="gunba.png">
+    <script src="https://kit.fontawesome.com/d04387d10b.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Higher Or Lower but with Math</title>
+</head>
+<body>
+    <a onclick="changeTheme()"><i class="fa-regular fa-sun" id="moon"></i></a>
+    <div id="main">
+        <label id="texto1" class="firstNum labels"></label>
+        <label id="texto2" class="secondNum labels"></label>
+    </div>
+    <div class="arrows">
+        <a onclick="higher()" id="click"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+        <label id="score">0</label>
+    <div class="arrows">
+        <a onclick="lower()" id="click2"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

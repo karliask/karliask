@@ -35,5 +35,4 @@ function log2(){
             terminal.removeAttribute("style");
           }
         }, 1000);
-    
 }

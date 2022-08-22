@@ -1,0 +1,191 @@
+:root {
+    --firstDark: #1e1e1e;
+    --secondDark: #242424;
+    --text: #e0e0e0;
+    --shadow: #281517;
+ }
+
+body{
+    font-family: 'Mukta', sans-serif;
+    background: linear-gradient(110deg, var(--firstDark) 45%, var(--secondDark) 45%);
+    height:100vh;
+    overflow: hidden;
+    color: var(--text)
+}
+
+a{
+    animation: startAnim 0.5s ease-in-out forwards;
+}
+
+.firstNum{
+    text-align: center;
+}
+
+.secondNum{
+    text-align: center;
+}
+
+.arrows{
+    color: #a92831;
+ }
+ 
+.dark{
+    color: #e0e0e0;
+}
+
+.light{
+    color: #212121
+}
+
+.lightArrows{
+    color: #ee2c4c
+}
+
+.ToLightTheme{
+    animation: dtl 1s ease-in-out forwards;
+}
+
+.toDarkTheme{
+    animation: ltd 1s ease-in-out forwards;
+}
+
+#main{
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    animation: startAnim 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+#moon{
+    font-size: 2rem;
+    padding: 10px;
+}
+
+#score{
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    animation: startAnim 0.5s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+}
+
+#click{
+    font-size: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 2%;
+    animation: arrowUp 2s ease-in-out infinite, numberDown 2s ease-in-out infinite, startAnim 0.5s ease-in-out forwards;
+    animation-delay: 0.8s;
+    text-shadow: 0 1px 0 var(--shadow);
+    opacity: 0;
+}
+
+#click2{
+    font-size: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 2%;
+    animation: arrowDown 2s ease-in-out infinite, numberUp 2s ease-in-out infinite, startAnim 0.5s ease-in-out forwards;
+    animation-delay: 0.8s;
+    text-shadow: 0 1px 0 var(--shadow);
+    opacity: 0;
+}
+
+@keyframes arrowUp{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes arrowDown{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes numberDown {
+    0%{
+        text-shadow: 0 0 0 var(--shadow);
+    }
+    50%{
+        text-shadow: -5px 0 0 var(--shadow);
+    }
+    100%{
+        text-shadow: 0 0 0 var(--shadow);
+    }
+}
+
+@keyframes numberUp {
+    0%{
+        text-shadow: 0 0 0 var(--shadow);
+    }
+    50%{
+        text-shadow: 5px 0 0 var(--shadow);
+    }
+    100%{
+        text-shadow: 0 0 0 var(--shadow);
+    }
+}
+
+@keyframes startAnim{
+    0%{
+        opacity: 0;
+        margin-bottom: -20px;
+    }
+    100%{
+        opacity: 1;
+        margin-bottom: 0;
+    }
+}
+
+@keyframes themeChange{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dtl{
+    from{
+        color: #e0e0e0
+    }
+    to{
+        color: #212121
+    }
+}
+
+@keyframes ltd{
+    from{
+        color: #212121
+    }
+    to{
+        color: #e0e0e0
+    }
+}
