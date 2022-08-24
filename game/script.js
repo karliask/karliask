@@ -12,7 +12,7 @@ let res1 = Math.floor(eval(number1));
 let res2 = Math.floor(eval(number2));
 let popup = document.getElementById('popup')
 let score = 0;
-let boolean = false
+let boolean = false;
 
 let cosas = {
     'texto1': number1,
