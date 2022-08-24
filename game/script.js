@@ -10,6 +10,7 @@ let number1 = makeCalc()
 let number2 = makeCalc()
 let res1 = Math.floor(eval(number1));
 let res2 = Math.floor(eval(number2));
+let popup = document.getElementById('popup')
 let score = 0;
 let boolean = false
 
@@ -19,6 +20,14 @@ let cosas = {
     'numero': res1,
     'numero2': res2,
 } 
+
+function openPopup(){
+    popup.classList.add('openPopup');
+}
+
+function closePopup(){
+    popup.classList.remove('openPopup');
+}
 
 function changeTheme(){
     if(boolean === false){

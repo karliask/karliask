@@ -49,6 +49,29 @@ a{
     animation: ltd 1s ease-in-out forwards;
 }
 
+.popup{
+    z-index: 100;
+    text-align: center;
+    padding: 20px;
+    width: 40%;
+    background-color: #2c2c2c;
+    box-shadow: 12px 12px 0 #1c2023;
+    border-radius: 5px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.openPopup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
 #main{
     opacity: 0;
     text-align: center;
@@ -65,6 +88,23 @@ a{
 #moon{
     font-size: 2rem;
     padding: 10px;
+}
+
+#help{
+    font-size: 2rem;
+    padding: 10px;
+    z-index: 101;
+}
+
+#icons{
+    display: flex;
+    justify-content: space-between
+}
+
+#mark{
+    position: relative;
+    right: 48%;
+    font-size: 1.2rem;
 }
 
 #score{
