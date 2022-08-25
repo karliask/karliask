@@ -12,7 +12,7 @@ let res1 = Math.floor(eval(number1));
 let res2 = Math.floor(eval(number2));
 let popup = document.getElementById('popup')
 let score = 0;
-let boolean = false;
+let boolean = false
 
 let cosas = {
     'texto1': number1,
@@ -39,6 +39,8 @@ function changeTheme(){
         moon.classList.add('fa-moon')
         moon.style.animation = 'themeChange 1s ease-in-out'
         croot.style.setProperty('--shadow', '#fdd5dc')
+        popup.style.setProperty('--popup', '#d0d0d0')
+        popup.style.setProperty('--popupS', '#9e9e9e')
         setInterval(function(){
             sec--
             if(sec == 0){
@@ -59,6 +61,8 @@ function changeTheme(){
         moon.classList.remove('fa-moon')
         moon.style.animation = 'themeChange 1s ease-in-out'
         croot.style.setProperty('--shadow', '#281517')
+        popup.style.setProperty('--popup', '#2c2c2c')
+        popup.style.setProperty('--popupS', '#1c2023')
         setInterval(function(){
             sec--
             if(sec == 0){
@@ -91,6 +95,7 @@ function reset(){
 }
 
 function higher(){
+    let sec = 1
     if (res1 >= res2){
         score++;
         scoreDisplay.innerHTML = score;
@@ -99,11 +104,19 @@ function higher(){
         reDisplay();
     }
     else{
+        body.style.animation = 'errorAnim 0.4s ease-in-out'
+        setInterval(function(){
+            sec--
+            if(sec == 0){
+                body.style.animation = 'none'
+            }
+        }, 400)
         reset();
     }
 }
 
 function lower(){
+    let sec = 1
     if (res1 <= res2){
         score++;
         scoreDisplay.innerHTML = score;
@@ -112,6 +125,13 @@ function lower(){
         reDisplay();
     }
     else{
+        body.style.animation = 'errorAnim 0.4s ease-in-out'
+        setInterval(function(){
+            sec--
+            if(sec == 0){
+                body.style.animation = 'none'
+            }
+        }, 400)
         reset();
     }
 }

@@ -3,18 +3,21 @@
     --secondDark: #242424;
     --text: #e0e0e0;
     --shadow: #281517;
- }
+    --popup: #2c2c2c;
+    --popupS: #1c2023;
+ } 
+ 
 
 body{
     font-family: 'Mukta', sans-serif;
     background: linear-gradient(110deg, var(--firstDark) 45%, var(--secondDark) 45%);
     height:100vh;
     overflow: hidden;
-    color: var(--text)
+    color: var(--text);
 }
 
 a{
-    animation: startAnim 0.5s ease-in-out forwards
+    animation: startAnim 0.5s ease-in-out forwards;
 }
 
 .firstNum{
@@ -54,8 +57,8 @@ a{
     text-align: center;
     padding: 20px;
     width: 40%;
-    background-color: #2c2c2c;
-    box-shadow: 12px 12px 0 #1c2023;
+    background-color: var(--popup);
+    box-shadow: 12px 12px 0 var(--popupS);
     border-radius: 5px;
     position: absolute;
     top: 0%;
@@ -227,5 +230,23 @@ a{
     }
     to{
         color: #e0e0e0
+    }
+}
+
+@keyframes errorAnim{
+    0%{
+        box-shadow: 0 0 0px rgb(120, 109, 109);
+    }
+    50%{
+        box-shadow: 0 0 40px #d11a1a;
+    }
+}
+
+@keyframes errorScore{
+    from{
+        color: var(--text)
+    }
+    to{
+        color: #d11a1a;
     }
 }
