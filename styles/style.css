@@ -574,6 +574,10 @@ img{
 
 
   @media (max-width: 768px) {
+    body{
+      overflow-x: hidden;
+    }
+
     h1{
         font-size: 3rem;
     }
@@ -588,6 +592,14 @@ img{
 
     .timeline{
         font-size: 0.8rem
+    }
+
+    .cursor{
+      visibility: hidden;
+      background-color: transparent;
+      border: none !important;
+      position: absolute !important;
+      margin-left: 1000%;
     }
 
     #techText{
@@ -612,8 +624,6 @@ img{
       align-self: flex-end;
       margin-bottom: 10%
     }
-
-    
 
     #techIcons{
       transform: translateY(-7%);
