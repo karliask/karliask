@@ -611,11 +611,9 @@ img{
       z-index: 100;
       font-size: 1.5rem;
       transform: all 300ms ease;
-      display: flex !important;
-      justify-content: flex-end;
-      justify-self: flex-end;
-      align-self: center;
-      align-items: center;
+      position: fixed; 
+      left: 10%;
+      top: 10%;
     }
 
     #techText{
