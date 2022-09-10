@@ -17,10 +17,11 @@ var dificulty = 0;
 var difNum = 10;
 var num = 0;
 let boolean = false;
-var seconds = 11;
-var hasLost = false
-var isOnSpeedrun = false
+//var seconds = 11;
+//var hasLost = false
+//var isOnSpeedrun = false
 
+/*
 function speedrun(){
     if(isOnSpeedrun === false){
         time.style.visibility = 'visible';
@@ -60,7 +61,7 @@ function timerCheck(){
     else{
         num++
     }}
-
+*/
 let cosas = {
     'texto1': number1,
     'texto2': number2, 
