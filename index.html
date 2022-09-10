@@ -1,44 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="icon" href="images/gunba.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>karliask.js</title>
+  <link rel="icon" href="gunba.png">
+  <script src="https://kit.fontawesome.com/d04387d10b.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Portfolio</title>
 </head>
+
 <body>
-    
-    <span class="terminal" id="terminal">
-        <div class="headerterminal" id="top">
-            <div class="btn close" onclick="closemin()"></div>
-            <div class="btn minimize"onclick="log2()"></div>
-            <div class="btn maximize"onclick="minimize()"></div>
-        </div>
-        <div class="insideterminal" id="interminal">
-        <span id="strings">function</span> <span id="funcparam">createKarliask</span><span id="yellowstuff">() { </span><br>
-           <span id="spaces"><span id="strings">var</span> <span id="varkarl">karliask</span> <span id="yellowstuff">= new</span> <span id="funcparam">Person</span><span id="parenthesis">()</span><span id="comments">;</span><br><br>
-        
-           <span id="spaces"><span id="varkarl">karliask</span><span id="comments">.</span><span id="funcparam">setName</span><span id="parenthesis">(<span id="strings">"karliask"</span>)</span><span id="comments">;</span><br>
-           <span id="spaces"><span id="varkarl">karliask</span><span id="comments">.</span><span id="funcparam">setBio</span><span id="parenthesis">(<span id="strings">"front-end dev - commissions closed atm"</span>)</span><span id="comments">;</span><br>
-           <span id="spaces"><span id="varkarl">karliask</span><span id="comments">.</span><span id="funcparam">setNicknames</span><span id="parenthesis">(<span id="funcparam">[<span id="strings">"karliask" <span id="comments">,</span> "karl"</span>]</span>)</span><span id="comments">;</span><br>
-           <span id="spaces"><span id="varkarl">karliask</span><span id="comments">.</span><span id="funcparam">setLocation</span><span id="parenthesis">(<span id="strings">"Ciudad Autonoma de Buenos Aires, Argentina"</span>)</span><span id="comments">;</span><br><br>
-        
-           <span id="spaces"><span id="comments">/* spending my time on */<br></span>
-           <span id="spaces"><span id="varkarl">karliask<span id="comments">.<span id="funcparam">addActivity<span id="parenthesis">(</span>{ <span id="attributes">name</span><span id="comments">:</span> <span id="strings">"100DaysOfCode"<span id="comments">, <span id="attributes">link</span>: </span><span id="strings">"<u><a href="https://100daysofcode.com" target="_blank_">100daysofcode.com</a></u>"</span></span>}<span id="parenthesis">)</span></span>;</span></span><br>
-           <span id="spaces"><span id="varkarl">karliask<span id="comments">.<span id="funcparam">addActivity<span id="parenthesis">(</span>{ <span id="attributes">name</span><span id="comments">:</span> <span id="strings">"Higher or Lower but with Math"<span id="comments">, <span id="attributes">link</span>: </span><span id="strings">"<u><a href="https://karliask.com.ar/game" target="_blank_">karliask.com.ar/game</a></u>"</span></span>}<span id="parenthesis">)</span></span>;</span></span><br>
-           <span id="spaces"><span id="varkarl">karliask<span id="comments">.<span id="funcparam">addActivity<span id="parenthesis">(</span>{ <span id="attributes">name</span><span id="comments">:</span> <span id="strings">"Personal Projects"</span>}<span id="parenthesis">)</span></span>;</span></span><br><br>
-        
-           <span id="spaces"><span id="comments">/* contact me on */</span><br>
-           <span id="spaces"><span id="varkarl">karliask<span id="comments">.<span id="funcparam">addContact<span id="parenthesis">(<span id="funcparam">{<span id="attributes">name<span id="comments">: <span id="strings">"discord"</span>, <span id="attributes">link</span>:</span> <span id="strings">"<u><a href="https://discord.com/users/672959600391225374" target="_blank_">https://discord.com/users/672959600391225374</a></u>"</span> </span>}</span>)</span></span>;</span></span><br>
-           <span id="spaces"><span id="varkarl">karliask<span id="comments">.<span id="funcparam">addContact<span id="parenthesis">(<span id="funcparam">{<span id="attributes">name<span id="comments">: <span id="strings">"steam"</span>, <span id="attributes">link</span>:</span> <span id="strings">"<u><a href="https://steamcommunity.com/id/karliask/" target="_blank_">https://steamcommunity.com/id/karliask/</a></u>"</span> </span>}</span>)</span></span>;</span></span><br>
-           <span id="spaces"><span id="varkarl">karliask<span id="comments">.<span id="funcparam">addContact<span id="parenthesis">(<span id="funcparam">{<span id="attributes">name<span id="comments">: <span id="strings">"instagram"</span>, <span id="attributes">link</span>:</span> <span id="strings">"<u><a href="https://instagram.com/__karliask__" target="_blank_">https://instagram.com/__karliask__</a></u>"</span> </span>}</span>)</span></span>;</span></span><br>
-           <span id="spaces"><span id="varkarl">karliask<span id="comments">.<span id="funcparam">addContact<span id="parenthesis">(<span id="funcparam">{<span id="attributes">name<span id="comments">: <span id="strings">"twitter"</span>, <span id="attributes">link</span>:</span> <span id="strings">"<u><a href="https://twitter.com/karliask" target="_blank_">https://twitter.com/karliask</a></u>"</span> </span>}</span>)</span></span>;</span></span><br>
-        <span id="yellowstuff">}</span>
+  <div></div>
+  <main>
+    <div id="landing">
+      <div class="blobs">
+        <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90%" id="blobSvg">
+          <g transform="translate(151.28540420532227, 16.353870391845703)">
+            <path fill="#a92831">
+              <animate attributeName="d" dur="10000ms" repeatCount="indefinite" values="M454,319Q439,388,378,422.5Q317,457,245.5,469.5Q174,482,126.5,428Q79,374,84,312Q89,250,71,178.5Q53,107,118,75Q183,43,246.5,53.5Q310,64,364,96Q418,128,443.5,189Q469,250,454,319Z;
+              M390.5,296Q377,342,339.5,375.5Q302,409,246,422Q190,435,130,408Q70,381,53,315.5Q36,250,80,204Q124,158,160,120.5Q196,83,248,89Q300,95,336.5,128Q373,161,388.5,205.5Q404,250,390.5,296Z;
+              M395.5007,298.00028Q382.0007,346.00056,350.00147,402.00371Q318.00224,458.00687,253.00098,450.00393Q187.99972,442.00098,132.50035,408.50007Q77.00098,374.99916,71.00252,312.49958Q65.00407,250,65.99804,183.49713Q66.99201,116.99425,123.99495,76.9939Q180.9979,36.99355,252.00056,30.99187Q323.00322,24.99019,366.50421,79.4932Q410.00519,133.99622,409.50294,191.99811Q409.0007,250,395.5007,298.00028Z;
+              M453,321.5Q446,393,382.5,427.5Q319,462,252.5,455Q186,448,155,395Q124,342,63.5,296Q3,250,42.5,189Q82,128,141.5,113Q201,98,253.5,87.5Q306,77,349,112Q392,147,426,198.5Q460,250,453,321.5Z;
+              M400,300Q388,350,344.5,378Q301,406,237.5,445Q174,484,127.5,428.5Q81,373,82.5,311.5Q84,250,93,196Q102,142,152.5,124.5Q203,107,260,75Q317,43,376,79.5Q435,116,423.5,183Q412,250,400,300Z;
+              M454,319Q439,388,378,422.5Q317,457,245.5,469.5Q174,482,126.5,428Q79,374,84,312Q89,250,71,178.5Q53,107,118,75Q183,43,246.5,53.5Q310,64,364,96Q418,128,443.5,189Q469,250,454,319Z"></animate>
+            </path>
+          </g>
+        </svg>
+      </div>
+        <h1><b>karliask</b></h1>
+        <h2>Front-End Web Developer</h2>
+        <p>More Info</p>
+        <a href="#about"><i class="fa-solid fa-chevron-down" id="arrow"></i></a>
+        <a href="#landing"><i class="fa-solid fa-chevron-up" id="arrowup"></i></a>
     </div>
-    </span>
-    <h1 id="face">>:c</h1>
-    <script src="js/main.js"></script>
+    <div class="wave1">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <div id="about">
+      <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g><g transform="translate(230 212)"><path d="M0 -147L114.9 -91.7L143.3 32.7L63.8 132.4L-63.8 132.4L-143.3 32.7L-114.9 -91.7Z" fill="#444"></path></g></g></svg>
+      <svg id="visual2" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g><g transform="translate(582 277)"><path d="M0 -147L127.3 -73.5L127.3 73.5L0 147L-127.3 73.5L-127.3 -73.5Z" fill="#444"></path></g></g></svg>
+      <div class="timeline">
+        <div class="outer">
+          <div class="card cardt" id="card1">
+            <div class="info">
+              <h3 class="ttitle" id="timeline">May 2019</h3>
+              <p>Got interested in coding. Started coding a game in GMS2.</p>
+            </div>
+          </div>
+          <div class="card" id="card2">
+            <div class="info">
+              <h3 class="ttitle">August 2019</h3>
+              <p>Gave up on coding with GMS2 and started using Construct (never did anything good).</p>
+            </div>
+          </div>
+          <div class="card" id="card3">
+            <div class="info">
+              <h3 class="ttitle">February 2020</h3>
+              <p>Started coding in HTML and CSS.</p>
+            </div>
+          </div>
+          <div class="card" id="card4">
+            <div class="info">
+              <h3 class="ttitle">May 2021</h3>
+              <p>Got started with JS.</p>
+            </div>
+          </div>
+          <div id="inner">
+            <div class="card" id="card5">
+              <div class="info">
+                <h3 class="ttitle" id="date">Now</h3>
+                <p>Still learning!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#technologies"><i class="fa-solid fa-chevron-down" id="arrow2"></i></a>
+      </div>
+    </div>
+    <div class="wave2">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25" class="shape-fill"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5" class="shape-fill"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <div id="technologies">
+      <div id="particles-js"></div>
+      <div id="techText">
+        <h2>Technologies:</h2>
+      </div>
+      <svg class="svgs">
+        <circle class="bg" cx="57" cy="57" r="52" />
+        <circle class="meter-1" cx="57" cy="57" r="52" id="tech1" />
+      </svg>
+      <svg class="svgs">
+        <circle class="bg" cx="57" cy="57" r="52" />
+        <circle class="meter-2" cx="57" cy="57" r="52" id="tech2" />
+      </svg>
+      <svg class="svgs">
+        <circle class="bg" cx="57" cy="57" r="52" />
+        <circle class="meter-3" cx="57" cy="57" r="52" id="tech3" />
+      </svg>
+      <div id="techIcons">
+        <i class="fa-brands fa-html5" id="html"></i>
+        <i class="fa-brands fa-css3-alt" id="css"></i>
+        <i class="fa-brands fa-square-js" id="js"></i>
+      </div>
+      <div id="thirdArrow">
+        <a href="#contact"><i class="fa-solid fa-chevron-down" id="arrow3"></i></a>
+      </div>
+    </div>
+    <div class="wave3">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25" class="shape-fill"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5" class="shape-fill"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <div id="contact">
+      <div class="blobs2">
+        <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90%" id="blobSvg2">
+          <g transform="translate(151.28540420532227, 16.353870391845703)">
+            <path fill="#568e45">
+              <animate attributeName="d" dur="10000ms" repeatCount="indefinite" values="M454,319Q439,388,378,422.5Q317,457,245.5,469.5Q174,482,126.5,428Q79,374,84,312Q89,250,71,178.5Q53,107,118,75Q183,43,246.5,53.5Q310,64,364,96Q418,128,443.5,189Q469,250,454,319Z;
+              M400,300Q388,350,344.5,378Q301,406,237.5,445Q174,484,127.5,428.5Q81,373,82.5,311.5Q84,250,93,196Q102,142,152.5,124.5Q203,107,260,75Q317,43,376,79.5Q435,116,423.5,183Q412,250,400,300Z;
+              M395.5007,298.00028Q382.0007,346.00056,350.00147,402.00371Q318.00224,458.00687,253.00098,450.00393Q187.99972,442.00098,132.50035,408.50007Q77.00098,374.99916,71.00252,312.49958Q65.00407,250,65.99804,183.49713Q66.99201,116.99425,123.99495,76.9939Q180.9979,36.99355,252.00056,30.99187Q323.00322,24.99019,366.50421,79.4932Q410.00519,133.99622,409.50294,191.99811Q409.0007,250,395.5007,298.00028Z;
+              M453,321.5Q446,393,382.5,427.5Q319,462,252.5,455Q186,448,155,395Q124,342,63.5,296Q3,250,42.5,189Q82,128,141.5,113Q201,98,253.5,87.5Q306,77,349,112Q392,147,426,198.5Q460,250,453,321.5Z;
+              M390.5,296Q377,342,339.5,375.5Q302,409,246,422Q190,435,130,408Q70,381,53,315.5Q36,250,80,204Q124,158,160,120.5Q196,83,248,89Q300,95,336.5,128Q373,161,388.5,205.5Q404,250,390.5,296Z;
+              M454,319Q439,388,378,422.5Q317,457,245.5,469.5Q174,482,126.5,428Q79,374,84,312Q89,250,71,178.5Q53,107,118,75Q183,43,246.5,53.5Q310,64,364,96Q418,128,443.5,189Q469,250,454,319Z"></animate>
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div id="textContact">
+        <h1>Contact Me</h1>
+        <a href="https://discord.com/users/672959600391225374" target="_blank" class="icon dis"><i id="but" class="fa fa-brands fa-discord"></i></a>
+        <a href="https://instagram.com/__karliask__" target="_blank" class="icon ins"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/karliask" target="_blank" class="icon twt"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://github.com/karliask" target="_blank" class="icon git"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </main>
+  <div class="cursor">
+    <div></div>
+  </div>
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

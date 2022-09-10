@@ -7,13 +7,22 @@
     --popupS: #1c2023;
  } 
  
+main{
+    width: 100%;
+    height: 100%;
+}
 
 body{
     font-family: 'Mukta', sans-serif;
     background: linear-gradient(110deg, var(--firstDark) 45%, var(--secondDark) 45%);
     height:100vh;
+    width: 100vw;
     overflow: hidden;
     color: var(--text);
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    transition: 0.5s;
 }
 
 a{
@@ -121,6 +130,23 @@ a{
     animation-delay: 0.6s;
 }
 
+#speedrun{
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+#time{
+    visibility: hidden;
+    width: 100%;
+    height: 1%;
+    background-color: #a92831;
+    padding: 0;
+    margin: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 #click{
     font-size: 3rem;
     width: 100%;
@@ -145,6 +171,10 @@ a{
     animation-delay: 0.8s;
     text-shadow: 0 1px 0 var(--shadow);
     opacity: 0;
+}
+
+#iconstwo{
+    font-size: 2rem;
 }
 
 @keyframes arrowUp{
@@ -238,15 +268,25 @@ a{
         box-shadow: 0 0 0px rgb(120, 109, 109);
     }
     50%{
-        box-shadow: 0 0 40px #d11a1a;
+        box-shadow: inset 0 0 100px 0px #d11a1a;
     }
 }
 
-@keyframes errorScore{
-    from{
-        color: var(--text)
+@keyframes rightAnim{
+    0%{
+        box-shadow: 0 0 0px rgb(120, 109, 109);
     }
+    50%{
+        box-shadow: inset 0 0 100px 0px #40d55e;
+    }
+}
+
+@keyframes reducingTime{
+    from{
+        width: 100%;
+    }
+
     to{
-        color: #d11a1a;
+        width: 0%;
     }
 }

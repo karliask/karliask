@@ -2,17 +2,64 @@ let texto1 = document.getElementById('texto1');
 let texto2 = document.getElementById('texto2');
 let scoreDisplay = document.getElementById('score');
 let body = document.querySelector('body');
+let margin = document.getElementById('margin')
 let arrows = document.getElementById('click')
 let arrows2 = document.getElementById('click2')
 let croot = document.querySelector(':root');
 let moon = document.getElementById('moon')
+let time = document.getElementById('time')
 let number1 = makeCalc()
 let number2 = makeCalc()
 let res1 = Math.floor(eval(number1));
 let res2 = Math.floor(eval(number2));
-let popup = document.getElementById('popup')
-let score = 0;
-let boolean = false
+var score = 0;
+var dificulty = 0;
+var difNum = 10;
+var num = 0;
+let boolean = false;
+var seconds = 11;
+var hasLost = false
+var isOnSpeedrun = false
+
+function speedrun(){
+    if(isOnSpeedrun === false){
+        time.style.visibility = 'visible';
+        time.style.animation = 'reducingTime 10s linear'
+        isOnSpeedrun = true;  
+    }
+
+    else if(isOnSpeedrun === true){
+        time.style.visibility = 'hidden';
+        isOnSpeedrun = false;
+        }
+    var interval = setInterval(function(){
+        seconds--
+        console.log(seconds)
+        if(seconds <= 0){
+            console.log('jaja perdio')
+            seconds = 11;
+            score = 0;
+            num = 0;
+            clearInterval(interval)}
+        else if(hasLost === true){
+            console.log('jaja perdio')
+            seconds = 11;
+            score = 0;
+            num = 0;  
+            clearInterval(interval)
+            hasLost = false;
+        }
+        }, 1000)
+    }
+
+
+function timerCheck(){
+    if(num == 0){
+        num++
+        speedrun()}
+    else{
+        num++
+    }}
 
 let cosas = {
     'texto1': number1,
@@ -90,6 +137,8 @@ function reDisplay(){
 
 function reset(){
     score = 0;
+    dificulty = 0;
+    difNum = 10;
     scoreDisplay.innerHTML = score;
     reDisplay();
 }
@@ -97,20 +146,36 @@ function reset(){
 function higher(){
     let sec = 1
     if (res1 >= res2){
-        score++;
-        scoreDisplay.innerHTML = score;
-        texto1.innerHTML = cosas.texto1;
-        texto2.innerHTML = cosas.texto2;
-        reDisplay();
-    }
-    else{
-        body.style.animation = 'errorAnim 0.4s ease-in-out'
+        body.style.animation = 'rightAnim 0.6s ease-in-out'
         setInterval(function(){
             sec--
             if(sec == 0){
                 body.style.animation = 'none'
             }
-        }, 400)
+        }, 600)
+        seconds = 10;
+        score++;
+        scoreDisplay.innerHTML = score;
+        texto1.innerHTML = cosas.texto1;
+        texto2.innerHTML = cosas.texto2;
+        if(isOnSpeedrun === true){
+            time.style.animation = 'none'
+            time.style.width = '100%';
+            console.log('s');
+            time.style.animation = 'reducingTime 10s linear', 1000
+            time.style.animationDelay = '1s'}
+        reDisplay();
+    }
+    else{
+        body.style.animation = 'errorAnim 0.6s ease-in-out'
+        seconds = 10;
+        hasLost = true;
+        setInterval(function(){
+            sec--
+            if(sec == 0){
+                body.style.animation = 'none'
+            }
+        }, 600)
         reset();
     }
 }
@@ -118,29 +183,66 @@ function higher(){
 function lower(){
     let sec = 1
     if (res1 <= res2){
-        score++;
-        scoreDisplay.innerHTML = score;
-        texto1.innerHTML = cosas.texto1;
-        texto2.innerHTML = cosas.texto2;
-        reDisplay();
-    }
-    else{
-        body.style.animation = 'errorAnim 0.4s ease-in-out'
+        body.style.animation = 'rightAnim 0.6s ease-in-out'
         setInterval(function(){
             sec--
             if(sec == 0){
                 body.style.animation = 'none'
             }
-        }, 400)
+        }, 600)
+        score++;
+        seconds = 10;
+        scoreDisplay.innerHTML = score;
+        texto1.innerHTML = cosas.texto1;
+        texto2.innerHTML = cosas.texto2;
+        if(isOnSpeedrun === true){
+            time.style.animation = 'none'
+            time.style.width = '100%';
+            console.log('s')
+            time.style.animation = 'reducingTime 10s linear', 1000
+            time.style.animationDelay = '1s'
+        }
+        reDisplay();
+    }
+    else{
+        body.style.animation = 'errorAnim 0.6s ease-in-out'
+        seconds = 10;
+        hasLost = true
+        setInterval(function(){
+            sec--
+            if(sec == 0){
+                body.style.animation = 'none'
+            }
+        }, 600)
         reset();
     }
 }
 
 function makeCalc(){
-    let numstart = Math.round(Math.random() * 10);
+    let numstart = Math.round(Math.random() * difNum);
     let start = numstart.toString();
     let firstSymbol = Math.round(Math.random() * 3 + 1);
     let secondStep = start
+
+    if(score >= 10){
+        difNum += 5;
+        dificulty += 1; 
+    }
+
+    if(score >= 15){
+        difNum += 10;
+        dificulty += 1; 
+    }
+
+    if(score >= 20){
+        difNum += 15;
+        dificulty += 1; 
+    }
+
+    if(score >= 30){
+        difNum += 25;
+        dificulty += 1; 
+    }
 
     if(firstSymbol == 1){
         secondStep = start.concat('+')
@@ -158,7 +260,7 @@ function makeCalc(){
         secondStep = start.concat('/')
     }
 
-    let sNumbermath = Math.round(Math.random() * 10)
+    let sNumbermath = Math.round(Math.random() * difNum)
     let sNumber = sNumbermath.toString();
     let thirdStep = secondStep.concat(sNumber);
     let forthStep = thirdStep
@@ -180,7 +282,7 @@ function makeCalc(){
         forthStep = thirdStep.concat('/')
     }
 
-    let thirdNumberMath = Math.round(Math.random() * 10)
+    let thirdNumberMath = Math.round(Math.random() * difNum)
     let thirdNumber = thirdNumberMath.toString();
     let lastStep = forthStep.concat(thirdNumber);;
     return lastStep;

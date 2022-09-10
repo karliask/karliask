@@ -16,14 +16,14 @@ particlesJS('particles-js',
   {
     "particles": {
       "number": {
-        "value": 100,
+        "value": 40,
         "density": {
           "enable": true,
           "value_area": 800
         }
       },
       "color": {
-        "value": "#b34343"
+        "value": "#ffffff"
       },
       "shape": {
         "type": "circle",
@@ -41,22 +41,22 @@ particlesJS('particles-js',
         }
       },
       "opacity": {
-        "value": 0.5,
+        "value": 1,
         "random": true,
         "anim": {
-          "enable": false,
+          "enable": true,
           "speed": 1,
-          "opacity_min": 0.1,
+          "opacity_min": 0,
           "sync": false
         }
       },
       "size": {
-        "value": 5,
+        "value": 3,
         "random": true,
         "anim": {
           "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
+          "speed": 4,
+          "size_min": 0.3,
           "sync": false
         }
       },
@@ -64,13 +64,13 @@ particlesJS('particles-js',
         "enable": false,
         "distance": 150,
         "color": "#ffffff",
-        "opacity": 0.7,
+        "opacity": 0.4,
         "width": 1
       },
       "move": {
         "enable": true,
-        "speed": 6,
-        "direction": "top",
+        "speed": 1,
+        "direction": "none",
         "random": true,
         "straight": false,
         "out_mode": "out",
@@ -85,12 +85,12 @@ particlesJS('particles-js',
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": false,
-          "mode": "repulse"
+          "enable": true,
+          "mode": "bubble"
         },
         "onclick": {
-          "enable": false,
-          "mode": "push"
+          "enable": true,
+          "mode": "repulse"
         },
         "resize": true
       },
@@ -102,10 +102,10 @@ particlesJS('particles-js',
           }
         },
         "bubble": {
-          "distance": 400,
-          "size": 40,
+          "distance": 150,
+          "size": 0,
           "duration": 2,
-          "opacity": 8,
+          "opacity": 0,
           "speed": 3
         },
         "repulse": {
