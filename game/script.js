@@ -159,12 +159,12 @@ function higher(){
         scoreDisplay.innerHTML = score;
         texto1.innerHTML = cosas.texto1;
         texto2.innerHTML = cosas.texto2;
-        if(isOnSpeedrun === true){
+        /*if(isOnSpeedrun === true){
             time.style.animation = 'none'
             time.style.width = '100%';
             console.log('s');
             time.style.animation = 'reducingTime 10s linear', 1000
-            time.style.animationDelay = '1s'}
+            time.style.animationDelay = '1s'}*/
         reDisplay();
     }
     else{
@@ -196,13 +196,13 @@ function lower(){
         scoreDisplay.innerHTML = score;
         texto1.innerHTML = cosas.texto1;
         texto2.innerHTML = cosas.texto2;
-        if(isOnSpeedrun === true){
+        /*if(isOnSpeedrun === true){
             time.style.animation = 'none'
             time.style.width = '100%';
             console.log('s')
             time.style.animation = 'reducingTime 10s linear', 1000
             time.style.animationDelay = '1s'
-        }
+        }*/
         reDisplay();
     }
     else{
