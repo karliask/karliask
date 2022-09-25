@@ -98,7 +98,7 @@ let questions = [
       "Lo que nos define como personas",
       "No tiene un significado como tal, varia segun la persona",
       "Son muchas cosas",
-      "Conjunto de rasgos o características de una persona o cosa que permiten distinguirla de otras en un conjunto."
+      "Conjunto de rasgos o características de una persona o cosa que permiten distinguirla de otras en un conjunto"
     ]
   },
   {
@@ -140,7 +140,7 @@ let questions = [
     answer: "Falso",
     options: [
       "Verdadero",
-      "Dpende de que cultura estemos hablando",
+      "Depende de que cultura estemos hablando",
       "Falso",
       "Puede ser"
     ]

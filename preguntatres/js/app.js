@@ -115,7 +115,7 @@ function nextQuestionHandler() {
     createTemplate(questions)
     setTimeout(timer, 1000)
 
-    if (index == 7) {
+    if (index == 16) {
         nextQuestion.classList.remove('show-next')
         endQuez.classList.add('show-end')
     } else {
@@ -126,19 +126,19 @@ function nextQuestionHandler() {
 function updateScore(right) {
 
     if (right > 14) {
-        cupImage.setAttribute('src', 'public/images/gold.png')
+        cupImage.setAttribute('src', 'images/trofeo.png')
         message.innerHTML = 'Felicidades!'
     } else if (right <= 13 && right > 10) {
-        cupImage.setAttribute('src', 'public/images/silver.png')
+        cupImage.setAttribute('src', 'images/segundopuesto.png')
         message.innerHTML = 'Bien ahi'
     } else if (right <= 9 && right >= 6) {
-        cupImage.setAttribute('src', 'public/images/bronze.png')
+        cupImage.setAttribute('src', 'images/tercerpuesto.png')
         message.innerHTML = 'Pasaste de suerte!'
     } else if (right == 1) {
-        cupImage.setAttribute('src', 'public/images/emojy.png')
+        cupImage.setAttribute('src', 'images/sosmalaso.png')
         message.innerHTML = 'A este punto ni estas intentando'
     } else {
-        cupImage.setAttribute('src', 'public/images/emojy.png')
+        cupImage.setAttribute('src', 'images/zzz.png')
         message.innerHTML = 'Esforzate mas para la proxima!'
     }
 
