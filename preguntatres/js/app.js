@@ -114,7 +114,7 @@ function nextQuestionHandler() {
     timeCount = 20
     createTemplate(questions)
     setTimeout(timer, 1000)
-
+    // aolfndioauebfiou3bqio2
     if (index == 16) {
         nextQuestion.classList.remove('show-next')
         endQuez.classList.add('show-end')
