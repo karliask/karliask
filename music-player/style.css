@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient( 0deg, #f7f7f7 23.8%, #ddfcf3 92%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sono', sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#queue{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 65%;
+  padding: 8px;
+  font-size: 15px;
+  overflow-y: scroll;
+  background-color: #FFFFFF;
+  box-shadow: 0 20px 20px 0 rgba(71, 69, 84, 0.6);
+  border-radius: 3px;
+  list-style: none;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+img{
+  height: 370px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.376);
+}
+
+.music-container {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 20px 20px 0 rgba(71, 69, 84, 0.6);
+  height: 65%;
+  width: 35%;
+  display: flex;
+  padding: 50px;
+  position: relative;
+  z-index: 10;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.img-container{
+  display: flex;
+  justify-content:center
+}
+
+.all{
+  width: 370px;
+  height: 370px;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+}
+
+.navigation {
+  position: absolute;
+  top: 77%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+input{
+  width: 10px;
+  transition: all 0.2s ease-in-out;
+  background: rgb(243, 239, 239);
+  border-radius: 4px;
+  opacity: 0.3;
+}
+
+input:hover{
+  width: 78%;
+  opacity: 1;
+}
+
+input::-moz-range-thumb {
+  width: 10px;
+  height: 20px;
+  border-radius: 2px;
+  background: #ffffff; 
+  cursor: pointer;
+}
+
+#volume{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  color: #dfdbdf;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+}
+
+#volume:hover{
+  color: #bcb8bc;
+}
+
+.action-btn {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  color: #dfdbdf;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+}
+
+.action-btn:hover{
+  color: #bcb8bc;
+}
+
+.action-btn.action-btn-big {
+  color: #cdc2d0;
+  font-size: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.action-btn.action-btn-big:hover {
+  color: #b4b0b4;
+  font-size: 30px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-info {
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 10px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.time{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.progress-container {
+  background: rgb(208, 208, 208);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #79d8bb;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: all 0.1s linear;
+}
+
+#shuffle{
+  margin: 0px 0px;
+}
+
+#topControl{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-between;
+  display: flex;
+  width: 80%;
+  height: 95%;
+}
+
+@media(max-height: 800px){
+  .music-container{
+    height: 80%;
+  }
+
+  .all{
+    height: 300px;
+  }
+
+  img{
+    height: 300px;
+  }
+}
+
+@media(max-height: 580px){
+  .all{
+    height: 250px;
+    width: 250px;
+  }
+
+  img{
+    height: 250px;
+  }
+}
+
+@media(max-width: 930px){
+
+  .music-container {
+    width: 450px;
+  }  
+}
+
+@media(max-width: 460px){
+  .music-container {
+    width: 90%;
+  }  
+}
