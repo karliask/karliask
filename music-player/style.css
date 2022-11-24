@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -17,6 +19,7 @@ body {
 }
 
 #queue{
+  font-family: 'Kanit', sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -235,6 +238,26 @@ input::-moz-range-thumb {
 }
 
 @media(max-width: 930px){
+  #queueDiv{
+    position: absolute;
+    top: 43%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 200px;
+    height: 120%;
+  }
+
+  #queue{
+    z-index: 10000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 150px;
+    height: 65%;
+  }
 
   .music-container {
     width: 450px;
