@@ -17,7 +17,7 @@ const dropBtn = document.querySelector('.dropbtn');
 let a = document.getElementById('audio');
 let mute = false 
 let volumeIcon = document.getElementById("volumeIcon")
-var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangsta's Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
+var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangsta's Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
 "Marketland", "Amnesia Was Her Name", "As Your Father I Expressly Forbid It", "I Earn My Life",
 "Reaganomics", "Spiral Of Ants", "Touch-Tone Telephone", "When He Died", "Sweet Bod", "Eighth Wonder", "Soft Fuzzy Man",
 "Taken for a Ride", "The Bidding", "Banana Man", "Two Wuv", "Ruler of Everything", "You & Me",
@@ -32,7 +32,7 @@ var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangsta's Paradise", "Hel
 "Taxman", "Let It Be", "Come Together", "Because", "Magical Mystery Tour", "Eleanor Rigby",
 "My Castle Town", "Death By Glamour"];
 
-var originalArray = ['Sweepstakes', '&', 'Cabinet Man', "Gangsta's Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
+var originalArray = ['Sweepstakes', '&', 'Cabinet Man', "Gangsta's Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
 "Marketland", "Amnesia Was Her Name", "As Your Father I Expressly Forbid It", "I Earn My Life",
 "Reaganomics", "Spiral Of Ants", "Touch-Tone Telephone", "When He Died", "Sweet Bod", "Eighth Wonder", "Soft Fuzzy Man",
 "Taken for a Ride", "The Bidding", "Banana Man", "Two Wuv", "Ruler of Everything", "You & Me",
