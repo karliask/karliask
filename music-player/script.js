@@ -16,12 +16,13 @@ const durTime = document.querySelector('#durTime');
 const dropBtn = document.querySelector('.dropbtn');
 let a = document.getElementById('audio');
 
-const btnNormal = document.getElementById('normal')
-const btnJazz = document.getElementById('jazz')
+const btnNormal = document.getElementById('normal');
+const btnJazz = document.getElementById('jazz');
+const btnChiptune = document.getElementById('chiptune');
 
 let mute = false 
 let volumeIcon = document.getElementById("volumeIcon")
-var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
+let exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
 "Marketland", "Amnesia Was Her Name", "As Your Father I Expressly Forbid It", "I Earn My Life",
 "Reaganomics", "Spiral Of Ants", "Touch-Tone Telephone", "When He Died", "Sweet Bod", "Eighth Wonder", "Soft Fuzzy Man",
 "Taken for a Ride", "The Bidding", "Banana Man", "Two Wuv", "Ruler Of Everything", "You & Me",
@@ -36,7 +37,7 @@ var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help
 "Taxman", "Let It Be", "Come Together", "Because", "Magical Mystery Tour", "Eleanor Rigby",
 "My Castle Town", "Death By Glamour"];
 
-var originalArray = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
+let originalArray = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
 "Marketland", "Amnesia Was Her Name", "As Your Father I Expressly Forbid It", "I Earn My Life",
 "Reaganomics", "Spiral Of Ants", "Touch-Tone Telephone", "When He Died", "Sweet Bod", "Eighth Wonder", "Soft Fuzzy Man",
 "Taken for a Ride", "The Bidding", "Banana Man", "Two Wuv", "Ruler of Everything", "You & Me",
@@ -51,7 +52,7 @@ var originalArray = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "He
 "Taxman", "Let It Be", "Come Together", "Because", "Magical Mystery Tour", "Eleanor Rigby",
 "My Castle Town", "Death By Glamour"];
 
-var OgjazzArr = [
+let OgjazzArr = [
   'A Gentle Reminder', 'Akaishi', 'Another Land', 'Answer Me My Love', 'Anthem', 'Constantly Changing', 'Dont Explain', 'Elsa', 'Estate', 'Farewell Farewell', 'First Day Of Spring','Foggy Sunday', "Her", 'Horizont', 'Im Not Myself Anymore', 'Knife In The Water',
   'Lonely Woman', 'Map - Compass', 'Melody', 'Misty', 'Miyako', 'Motel Money', 'My Funny Valentine', 'My One And Only Love',
   'Naima', 'Night Wispers', 'Obliqua', 'Over The Rainbow', "Release", 'Solace', 'Some Other Time', 'Sondan', 'Special One', 'Stop Fighting',
@@ -61,7 +62,7 @@ var OgjazzArr = [
   'It Could Happen To You', 'I See Your Face Before Me'
 ];
 
-var jazzArr = [
+let jazzArr = [
   'A Gentle Reminder', 'Akaishi', 'Another Land', 'Answer Me My Love', 'Anthem', 'Constantly Changing', 'Dont Explain', 'Elsa', 'Estate', 'Farewell Farewell', 'First Day Of Spring','Foggy Sunday', "Her", 'Horizont', 'Im Not Myself Anymore', 'Knife In The Water',
   'Lonely Woman', 'Map - Compass', 'Melody', 'Misty', 'Miyako', 'Motel Money', 'My Funny Valentine', 'My One And Only Love',
   'Naima', 'Night Wispers', 'Obliqua', 'Over The Rainbow', "Release", 'Solace', 'Some Other Time', 'Sondan', 'Special One', 'Stop Fighting',
@@ -69,14 +70,34 @@ var jazzArr = [
   'Under The Sun', 'Unsaid', 'Voyage', 'Waters Edge', 'When Sunny Gets Blue', 'You Make Me Feel Brand New', 
   'Youth', 'Youve Changed', 'Unworthy', 'Giving Thanks', 'Prayer', 'Cant Buy Me Love', 'Vacqueyras', 'Down The Memory Lane', 'One Hundred Ways',
   'It Could Happen To You', 'I See Your Face Before Me'
+];
+
+let OgChiptuneArr = [
+  '2k9battlejam', '4 Repeating Chords', '8 Bit Adventure', '9-Bit Expedition', 'Acheron', 'Aquatic Jambiance', 'Astro Soda', 'At Teh Disko', 'Badlands', 'Be Gone Mr. Gawne', 'Behemoth', 'Beyond Bounds', 'Bitpop', 'Bright Matter', 'Caps On Hats Off', 'Cartridge', 'Cascade', 'Chip Zeal', 'Circuithead', 'Cloudgazer', 'Collision Event',
+  'Commando Steve', 'Compass', 'Concrete', 'Corrision City', 'Credits Song For My Death', 'Cronos', 'Damage', 'Dew', 'Dinner Before Dawn', 'Disconnect', 'Dolphins In Space', 'Easy Mode', 
+  'Ember', 'Escapist', 'Farbror Melker Fixar Fiskdamm', 'Final Blast', 'Flicker', 'Flirt Flirt Oh It Hurts', 'Formed By Glaciers', 'Fox', 'Go For Distance', 'Gravity', 'Helmut Haunter', 'I Inc', 'Icarus', 'In The Halls Of The Usurper', 'Indolence', 
+  'Jack Russel', 'Juggernaut', 'Leaving Leafwood Forest', 'Live By The Sword', 'Lorgasm', 'Love Is Insecurable', 'Machinery', 'Manarola', 'Mellow', 'Milky Ways', 'Motivation', 'Musraket', 'Only Human', 'Out Of Love', 'Overworld', 'Paracet', 'Parallel Processing', 'Partybolt', 
+  'Pathfinder', 'Penguin Zombie Apocalypse', 'Pewpewpew', 'Pirate Manners', 'Planet I', 'Planet II', 'Planet III', 'Planet IV', 'Planet V', 'Portabellohead', 'Positive Force', 'Restoration', 'Retro Tune', 'Rip Crystal Visions', 'Ropes',
+  'Seahorse Dreams', 'Sleet', 'Starlight Eyes', 'Starship Showdown', 'Steampunk Warlord', 'Summits', 'Sunrise', 'Symphony Of A Forgotten Sprite', 'The Alliance', 'The Cairn', 'The Cave The Treasure', 'The Hibernator', 'The Maze Of Mayonnaise',
+  'The Reaver', 'The See-Through Zone', 'The Spectator', 'Tidal Force', 'To The Sky', 'Toaster', 'Up In My Jam', 'Vindicate Me', 'Virtuoso Sexy', 'Vita', 'Vitamin B12', 'Warm Hugs In Court', 'We Are Wired', 'Zero Gravity Love'
+]
+let chiptuneArr = [
+  '2k9battlejam', '4 Repeating Chords', '8 Bit Adventure', '9-Bit Expedition', 'Acheron', 'Aquatic Jambiance', 'Astro Soda', 'At Teh Disko', 'Badlands', 'Be Gone Mr. Gawne', 'Behemoth', 'Beyond Bounds', 'Bitpop', 'Bright Matter', 'Caps On Hats Off', 'Cartridge', 'Cascade', 'Chip Zeal', 'Circuithead', 'Cloudgazer', 'Collision Event',
+  'Commando Steve', 'Compass', 'Concrete', 'Corrision City', 'Credits Song For My Death', 'Cronos', 'Damage', 'Dew', 'Dinner Before Dawn', 'Disconnect', 'Dolphins In Space', 'Easy Mode', 
+  'Ember', 'Escapist', 'Farbror Melker Fixar Fiskdamm', 'Final Blast', 'Flicker', 'Flirt Flirt Oh It Hurts', 'Formed By Glaciers', 'Fox', 'Go For Distance', 'Gravity', 'Helmut Haunter', 'I Inc', 'Icarus', 'In The Halls Of The Usurper', 'Indolence', 
+  'Jack Russel', 'Juggernaut', 'Leaving Leafwood Forest', 'Live By The Sword', 'Lorgasm', 'Love Is Insecurable', 'Machinery', 'Manarola', 'Mellow', 'Milky Ways', 'Motivation', 'Musraket', 'Only Human', 'Out Of Love', 'Overworld', 'Paracet', 'Parallel Processing', 'Partybolt', 
+  'Pathfinder', 'Penguin Zombie Apocalypse', 'Pewpewpew', 'Pirate Manners', 'Planet I', 'Planet II', 'Planet III', 'Planet IV', 'Planet V', 'Portabellohead', 'Positive Force', 'Restoration', 'Retro Tune', 'Rip Crystal Visions', 'Ropes',
+  'Seahorse Dreams', 'Sleet', 'Starlight Eyes', 'Starship Showdown', 'Steampunk Warlord', 'Summits', 'Sunrise', 'Symphony Of A Forgotten Sprite', 'The Alliance', 'The Cairn', 'The Cave The Treasure', 'The Hibernator', 'The Maze Of Mayonnaise',
+  'The Reaver', 'The See-Through Zone', 'The Spectator', 'Tidal Force', 'To The Sky', 'Toaster', 'Up In My Jam', 'Vindicate Me', 'Virtuoso Sexy', 'Vita', 'Vitamin B12', 'Warm Hugs In Court', 'We Are Wired', 'Zero Gravity Love'
 ];
 
 let songIndex = 0;
-var i = 0
-var afa = shuffleArray(originalArray);
-var shuffledJazz = shuffleArray(jazzArr)
-var songs = exampleList;
-var arrayLength = songs.length;
+let i = 0
+let afa = shuffleArray(originalArray);
+let shuffledJazz = shuffleArray(jazzArr)
+let shuffledChiptune = shuffleArray(chiptuneArr)
+let songs = exampleList;
+let arrayLength = songs.length;
 let isLooping = false;
 let shuffleIcon = document.getElementById("shuffleIcon");
 
@@ -88,6 +109,27 @@ function shuffleArray(array) {
         array[j] = temp;
     }
     return array;
+}
+
+let playingChiptune = false
+function chiptune(){
+  if(playingChiptune === false){
+    playingChiptune = true;
+    playingNormal = false;
+    playingJazz = false;
+    btnChiptune.style.color = "#646161";
+    btnChiptune.style.border = "1px solid #646161";
+    btnNormal.style.color = "#c6c5c6";
+    btnNormal.style.border = "1px solid #c2c2c2";
+    btnJazz.style.color = "#c6c5c6";
+    btnJazz.style.border = "1px solid #c2c2c2";
+    songIndex = 0;
+    songs = OgChiptuneArr;
+    arrayLength = songs.length;
+    loadSong();
+    nextSong();
+    prevSong()
+  }
 }
 
 let playingJazz = false
@@ -124,7 +166,6 @@ function normal(){
     nextSong();
     prevSong();
   }
-  
 }
 
 var counter = true
@@ -139,6 +180,12 @@ function loadSong(song) {
     title.innerText = song;
     audio.src = `jazz/${song}.mp3`;
     cover.src = `images/Jazz.jpg`;
+  }
+
+  else if(playingChiptune === true){
+    title.innerText = song;
+    audio.src = `chiptune/${song}.mp3`;
+    cover.src = `images/Chiptune.jpg`;
   }
 }
 
