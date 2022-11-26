@@ -21,7 +21,7 @@ const btnJazz = document.getElementById('jazz')
 
 let mute = false 
 let volumeIcon = document.getElementById("volumeIcon")
-var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
+var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
 "Marketland", "Amnesia Was Her Name", "As Your Father I Expressly Forbid It", "I Earn My Life",
 "Reaganomics", "Spiral Of Ants", "Touch-Tone Telephone", "When He Died", "Sweet Bod", "Eighth Wonder", "Soft Fuzzy Man",
 "Taken for a Ride", "The Bidding", "Banana Man", "Two Wuv", "Ruler Of Everything", "You & Me",
@@ -36,7 +36,7 @@ var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help
 "Taxman", "Let It Be", "Come Together", "Because", "Magical Mystery Tour", "Eleanor Rigby",
 "My Castle Town", "Death By Glamour"];
 
-var originalArray = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
+var originalArray = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
 "Marketland", "Amnesia Was Her Name", "As Your Father I Expressly Forbid It", "I Earn My Life",
 "Reaganomics", "Spiral Of Ants", "Touch-Tone Telephone", "When He Died", "Sweet Bod", "Eighth Wonder", "Soft Fuzzy Man",
 "Taken for a Ride", "The Bidding", "Banana Man", "Two Wuv", "Ruler of Everything", "You & Me",
@@ -57,7 +57,8 @@ var OgjazzArr = [
   'Naima', 'Night Wispers', 'Obliqua', 'Over The Rainbow', "Release", 'Solace', 'Some Other Time', 'Sondan', 'Special One', 'Stop Fighting',
   'Swan Lake', 'Tender Love', 'The Peakocks', 'The Shining Sea', 'Totalerweise', 'Tranquility',
   'Under The Sun', 'Unsaid', 'Voyage', 'Waters Edge', 'When Sunny Gets Blue', 'You Make Me Feel Brand New', 
-  'Youth', 'Youve Changed', 'Unworthy', 'Giving Thanks', 'Prayer'
+  'Youth', 'Youve Changed', 'Unworthy', 'Giving Thanks', 'Prayer', 'Cant Buy Me Love', 'Vacqueyras', 'Down The Memory Lane', 'One Hundred Ways',
+  'It Could Happen To You', 'I See Your Face Before Me'
 ];
 
 var jazzArr = [
@@ -66,7 +67,8 @@ var jazzArr = [
   'Naima', 'Night Wispers', 'Obliqua', 'Over The Rainbow', "Release", 'Solace', 'Some Other Time', 'Sondan', 'Special One', 'Stop Fighting',
   'Swan Lake', 'Tender Love', 'The Peakocks', 'The Shining Sea', 'Totalerweise', 'Tranquility',
   'Under The Sun', 'Unsaid', 'Voyage', 'Waters Edge', 'When Sunny Gets Blue', 'You Make Me Feel Brand New', 
-  'Youth', 'Youve Changed'
+  'Youth', 'Youve Changed', 'Unworthy', 'Giving Thanks', 'Prayer', 'Cant Buy Me Love', 'Vacqueyras', 'Down The Memory Lane', 'One Hundred Ways',
+  'It Could Happen To You', 'I See Your Face Before Me'
 ];
 
 let songIndex = 0;
