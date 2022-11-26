@@ -18,6 +18,63 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+img{
+  height: 370px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.376);
+}
+
+input{
+  width: 10px;
+  transition: all 0.2s ease-in-out;
+  background: rgb(243, 239, 239);
+  border-radius: 4px;
+  opacity: 0.3;
+}
+
+input:hover{
+  width: 78%;
+  opacity: 1;
+}
+
+input::-moz-range-thumb {
+  width: 10px;
+  height: 20px;
+  border-radius: 2px;
+  background: #ffffff; 
+  cursor: pointer;
+}
+
+#shuffle{
+  margin: 0px 0px;
+}
+
+#topControl{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-between;
+  display: flex;
+  width: 80%;
+  height: 95%;
+}
+
+#volume{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  color: #dfdbdf;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+}
+
+#volume:hover{
+  color: #bcb8bc;
+}
+
 #queue{
   font-family: 'Kanit', sans-serif;
   position: absolute;
@@ -38,11 +95,25 @@ body {
   text-align: center;
 }
 
-img{
-  height: 370px;
-  text-align: center;
+#playlists{
+  position: absolute;
+  display: flex;
+  top: 90%;
+  z-index: 1000;
+}
+
+.btnMusic{
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #c2c2c2;
   border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.376);
+  color: #c6c5c6;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
 }
 
 .music-container {
@@ -80,41 +151,6 @@ img{
   justify-self: center;
   justify-content: center;
   z-index: 1;
-}
-
-input{
-  width: 10px;
-  transition: all 0.2s ease-in-out;
-  background: rgb(243, 239, 239);
-  border-radius: 4px;
-  opacity: 0.3;
-}
-
-input:hover{
-  width: 78%;
-  opacity: 1;
-}
-
-input::-moz-range-thumb {
-  width: 10px;
-  height: 20px;
-  border-radius: 2px;
-  background: #ffffff; 
-  cursor: pointer;
-}
-
-#volume{
-  background-color: rgba(255, 255, 255, 0);
-  border: 0;
-  color: #dfdbdf;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  align-items: center;
-}
-
-#volume:hover{
-  color: #bcb8bc;
 }
 
 .action-btn {
@@ -197,21 +233,6 @@ input::-moz-range-thumb {
   transition: all 0.1s linear;
 }
 
-#shuffle{
-  margin: 0px 0px;
-}
-
-#topControl{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  justify-content: space-between;
-  display: flex;
-  width: 80%;
-  height: 95%;
-}
-
 @media(max-height: 800px){
   .music-container{
     height: 80%;
@@ -268,4 +289,4 @@ input::-moz-range-thumb {
   .music-container {
     width: 90%;
   }  
-} /*why u reading this*/
+}

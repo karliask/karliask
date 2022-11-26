@@ -15,9 +15,28 @@ const divQueue = document.getElementById("queueDiv")
 const durTime = document.querySelector('#durTime');
 const dropBtn = document.querySelector('.dropbtn');
 let a = document.getElementById('audio');
+
+const btnNormal = document.getElementById('normal')
+const btnJazz = document.getElementById('jazz')
+
 let mute = false 
 let volumeIcon = document.getElementById("volumeIcon")
-var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangsta's Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
+var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
+"Marketland", "Amnesia Was Her Name", "As Your Father I Expressly Forbid It", "I Earn My Life",
+"Reaganomics", "Spiral Of Ants", "Touch-Tone Telephone", "When He Died", "Sweet Bod", "Eighth Wonder", "Soft Fuzzy Man",
+"Taken for a Ride", "The Bidding", "Banana Man", "Two Wuv", "Ruler Of Everything", "You & Me",
+"Sacred Beast", "A Lady", "Misery Fell", "Clint Eastwood", "Man Research (Clapper)", "Double Bass",
+"Rock The House", "19-2000", "Tomorrow Comes Today", "Rockit", "We Are The Happy Landfill",
+"Detroit", "Humility", "Tranz", "Hollywood", "Kansas", "Souk Eye", "Broken", "Plastic Beach",
+"To Binge", "Pirate Jet", "Stylo", "Superfast Jellyfish", "Empire Ants", "Glitter Freeze", "On Melancholy Hill",
+"All Alone", "White Light", "DARE", "Demon Days", "Welcome To The World Of The Plastic Beach",
+"O Green World", "Dirty Harry", "Feel Good Inc", "Every Planet We Reach Is Dead", "November Has Come",
+"Kids With Guns", "Last Living Souls", "Cracker Island", "Smooth Criminal", "Bad", "Strawberry Fields Forever",
+"Penny Lane", "Sgt Pepper's Lonely Hearts Club Band", "Lucy In The Sky With Diamonds", "A Day In A Life",
+"Taxman", "Let It Be", "Come Together", "Because", "Magical Mystery Tour", "Eleanor Rigby",
+"My Castle Town", "Death By Glamour"];
+
+var originalArray = ['Sweepstakes', '&', 'Cabinet Man', "Gangstas Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
 "Marketland", "Amnesia Was Her Name", "As Your Father I Expressly Forbid It", "I Earn My Life",
 "Reaganomics", "Spiral Of Ants", "Touch-Tone Telephone", "When He Died", "Sweet Bod", "Eighth Wonder", "Soft Fuzzy Man",
 "Taken for a Ride", "The Bidding", "Banana Man", "Two Wuv", "Ruler of Everything", "You & Me",
@@ -32,23 +51,28 @@ var exampleList = ['Sweepstakes', '&', 'Cabinet Man', "Gangsta's Paradise", "Hel
 "Taxman", "Let It Be", "Come Together", "Because", "Magical Mystery Tour", "Eleanor Rigby",
 "My Castle Town", "Death By Glamour"];
 
-var originalArray = ['Sweepstakes', '&', 'Cabinet Man', "Gangsta's Paradise", "Help", "New Gold", "Yesterday (Remastered)", "Really Cool Wig", "Brodyquest", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", "Jaws", "My Trains", "Sundial", 
-"Marketland", "Amnesia Was Her Name", "As Your Father I Expressly Forbid It", "I Earn My Life",
-"Reaganomics", "Spiral Of Ants", "Touch-Tone Telephone", "When He Died", "Sweet Bod", "Eighth Wonder", "Soft Fuzzy Man",
-"Taken for a Ride", "The Bidding", "Banana Man", "Two Wuv", "Ruler of Everything", "You & Me",
-"Sacred Beast", "A Lady", "Misery Fell", "Clint Eastwood", "Man Research (Clapper)", "Double Bass",
-"Rock The House", "19-2000", "Tomorrow Comes Today", "Rockit", "We Are The Happy Landfill",
-"Detroit", "Humility", "Tranz", "Hollywood", "Kansas", "Souk Eye", "Broken", "Plastic Beach",
-"To Binge", "Pirate Jet", "Stylo", "Superfast Jellyfish", "Empire Ants", "Glitter Freeze", "On Melancholy Hill",
-"All Alone", "White Light", "DARE", "Demon Days", "Welcome To The World Of The Plastic Beach",
-"O Green World", "Dirty Harry", "Feel Good Inc", "Every Planet We Reach Is Dead", "November Has Come",
-"Kids With Guns", "Last Living Souls", "Cracker Island", "Smooth Criminal", "Bad", "Strawberry Fields Forever",
-"Penny Lane", "Sgt Pepper's Lonely Hearts Club Band", "Lucy In The Sky With Diamonds", "A Day In A Life",
-"Taxman", "Let It Be", "Come Together", "Because", "Magical Mystery Tour", "Eleanor Rigby",
-"My Castle Town", "Death By Glamour"];
+var OgjazzArr = [
+  'A Gentle Reminder', 'Akaishi', 'Another Land', 'Answer Me My Love', 'Anthem', 'Constantly Changing', 'Dont Explain', 'Elsa', 'Estate', 'Farewell Farewell', 'First Day Of Spring','Foggy Sunday', "Her", 'Horizont', 'Im Not Myself Anymore', 'Knife In The Water',
+  'Lonely Woman', 'Map - Compass', 'Melody', 'Misty', 'Miyako', 'Motel Money', 'My Funny Valentine', 'My One And Only Love',
+  'Naima', 'Night Wispers', 'Obliqua', 'Over The Rainbow', "Release", 'Solace', 'Some Other Time', 'Sondan', 'Special One', 'Stop Fighting',
+  'Swan Lake', 'Tender Love', 'The Peakocks', 'The Shining Sea', 'Totalerweise', 'Tranquility',
+  'Under The Sun', 'Unsaid', 'Voyage', 'Waters Edge', 'When Sunny Gets Blue', 'You Make Me Feel Brand New', 
+  'Youth', 'Youve Changed', 'Unworthy', 'Giving Thanks', 'Prayer'
+];
+
+var jazzArr = [
+  'A Gentle Reminder', 'Akaishi', 'Another Land', 'Answer Me My Love', 'Anthem', 'Constantly Changing', 'Dont Explain', 'Elsa', 'Estate', 'Farewell Farewell', 'First Day Of Spring','Foggy Sunday', "Her", 'Horizont', 'Im Not Myself Anymore', 'Knife In The Water',
+  'Lonely Woman', 'Map - Compass', 'Melody', 'Misty', 'Miyako', 'Motel Money', 'My Funny Valentine', 'My One And Only Love',
+  'Naima', 'Night Wispers', 'Obliqua', 'Over The Rainbow', "Release", 'Solace', 'Some Other Time', 'Sondan', 'Special One', 'Stop Fighting',
+  'Swan Lake', 'Tender Love', 'The Peakocks', 'The Shining Sea', 'Totalerweise', 'Tranquility',
+  'Under The Sun', 'Unsaid', 'Voyage', 'Waters Edge', 'When Sunny Gets Blue', 'You Make Me Feel Brand New', 
+  'Youth', 'Youve Changed'
+];
+
 let songIndex = 0;
 var i = 0
 var afa = shuffleArray(originalArray);
+var shuffledJazz = shuffleArray(jazzArr)
 var songs = exampleList;
 var arrayLength = songs.length;
 let isLooping = false;
@@ -64,12 +88,56 @@ function shuffleArray(array) {
     return array;
 }
 
+let playingJazz = false
+function jazz(){
+  if(playingJazz === false){
+    playingJazz = true;
+    playingNormal = false;
+    btnJazz.style.color = "#646161";
+    btnJazz.style.border = "1px solid #646161";
+    btnNormal.style.color = "#c6c5c6";
+    btnNormal.style.border = "1px solid #c2c2c2";
+    songIndex = 0;
+    songs = OgjazzArr;
+    arrayLength = songs.length;
+    loadSong();
+    nextSong();
+    prevSong()
+  }
+}
+
+let playingNormal = true
+function normal(){
+  if(playingNormal === false){
+    playingNormal = true;
+    playingJazz = false;
+    btnNormal.style.color = "#646161";
+    btnNormal.style.border = "1px solid #646161";
+    btnJazz.style.color = "#c6c5c6";
+    btnJazz.style.border = "1px solid #c2c2c2";
+    songIndex = 0;
+    songs = exampleList;
+    arrayLength = songs.length;
+    loadSong();
+    nextSong();
+    prevSong();
+  }
+  
+}
+
 var counter = true
 
 function loadSong(song) {
-  title.innerText = song;
-  audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`;
+  if(playingNormal === true){
+    title.innerText = song;
+    audio.src = `music/${song}.mp3`;
+    cover.src = `images/${song}.jpg`;
+  }
+  else if(playingJazz === true){
+    title.innerText = song;
+    audio.src = `jazz/${song}.mp3`;
+    cover.src = `images/Jazz.jpg`;
+  }
 }
 
 
@@ -77,18 +145,35 @@ function loadSong(song) {
 
 function shuffle(){
   if(counter === true){
-    counter = false;
-    afa = shuffleArray(originalArray);
-    songs = afa;
-    shuffleIcon.style.color = "#646161";
-    queue();
+    if(playingJazz === true){
+      counter = false;
+      shuffledJazz = shuffleArray(jazzArr);
+      songs = shuffledJazz;
+      shuffleIcon.style.color = "#646161";
+      queue();
+    }
+    else if(playingNormal === true){
+      counter = false;
+      afa = shuffleArray(originalArray);
+      songs = afa;
+      shuffleIcon.style.color = "#646161";
+      queue();
+    }
   }
 
   else if(counter === false){
-    counter = true;
-    songs = exampleList;
-    shuffleIcon.style.color = "#dfdbdf";
-    queue();
+    if(playingJazz === true){
+      counter = true;
+      songs = OgjazzArr;
+      shuffleIcon.style.color = "#dfdbdf";
+      queue();
+    }
+    if(playingNormal === true){
+      counter = true;
+      songs = exampleList;
+      shuffleIcon.style.color = "#dfdbdf";
+      queue();
+    }
   }
 }
 
@@ -177,9 +262,16 @@ function pauseSong() {
 
 function prevSong() {
   songIndex--;
+  if(isLooping == true){
+    if (songIndex < 0) {
+      songIndex = songs.length - 1;
+    }
+  }
 
-  if (songIndex < 0) {
-    songIndex = songs.length - 1;
+  else if(isLooping == false){
+    if (songIndex < 0) {
+      songIndex = 0;
+    }
   }
 
   loadSong(songs[songIndex]);
