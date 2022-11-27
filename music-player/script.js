@@ -137,10 +137,13 @@ function jazz(){
   if(playingJazz === false){
     playingJazz = true;
     playingNormal = false;
+    playingChiptune = false;
     btnJazz.style.color = "#646161";
     btnJazz.style.border = "1px solid #646161";
     btnNormal.style.color = "#c6c5c6";
     btnNormal.style.border = "1px solid #c2c2c2";
+    btnChiptune.style.color = "#c6c5c6";
+    btnChiptune.style.border = "1px solid #c2c2c2";
     songIndex = 0;
     songs = OgjazzArr;
     arrayLength = songs.length;
@@ -155,10 +158,13 @@ function normal(){
   if(playingNormal === false){
     playingNormal = true;
     playingJazz = false;
+    playingChiptune = false;
     btnNormal.style.color = "#646161";
     btnNormal.style.border = "1px solid #646161";
     btnJazz.style.color = "#c6c5c6";
     btnJazz.style.border = "1px solid #c2c2c2";
+    btnChiptune.style.color = "#c6c5c6";
+    btnChiptune.style.border = "1px solid #c2c2c2";
     songIndex = 0;
     songs = exampleList;
     arrayLength = songs.length;
