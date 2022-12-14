@@ -38,7 +38,7 @@
         <div class="img-container">
           <img alt="music-cover" id="cover" />
         </div>
-        <audio src="music/sweepstakes.mp3" id="audio"></audio>  
+        <audio src="music/Marketland.mp3" id="audio"></audio>  
         <div class="navigation">
           <button id="loop" class="action-btn">
             <i class="fa-solid fa-arrows-rotate" onclick="loop()"></i>
@@ -68,16 +68,28 @@
         </div>
       </div>
     </div>
+    <div id="customDiv">
+      <ul id="customP">
+      
+      </ul>
+    </div>
     <div id="queueDiv">
       <ul id="queue">
       
       </ul>
     </div>
+
     <div id="playlists">
-      <button class="btnMusic" onclick="normal()" id="normal"><i class="fa-regular fa-user-music"></i></button>
+      <button class="btnMusic" onclick="indie()" id="indie"><i class="fa-regular fa-user"></i></button>
       <button class="btnMusic" onclick="jazz()" id="jazz"><i class="fa-solid fa-saxophone"></i></button>
       <button class="btnMusic" onclick="chiptune()" id="chiptune"><i class="fa-regular fa-alien-8bit"></i></button>
+      <button class="btnMusic" onclick="lofi()" id="lofi"><i class="fa-regular fa-mug-tea"></i></button>
+      <button class="btnMusic" onclick="custom()" id="custom"><i class="fa-regular fa-user-music"></i></button>
+      <button class="action-btn" onclick="addSongToCustomPlaylist()" style="z-index: 1900">
+        <i class="fa-regular fa-sliders"></i>
+      </button>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

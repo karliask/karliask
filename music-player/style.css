@@ -46,8 +46,43 @@ input::-moz-range-thumb {
   cursor: pointer;
 }
 
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid rgb(160, 160, 160);
+  transition: all 0.2s ease-in-out;
+}
+
+li:hover{
+  background: rgb(214, 214, 214);
+  color: #5d5d5d
+}
+
+#indie{
+  color:#646161;
+  border: 1px solid #646161;
+}
+
+#customDiv img{
+  height: 40px;
+}
+
 #shuffle{
   margin: 0px 0px;
+}
+
+#shuffleIcon{
+  transition: all 0.2s ease-in-out;
+}
+
+#shuffle:hover{
+  color: #bcb8bc;
+}
+
+#shuffleIcon:hover{
+  color: #bcb8bc;
 }
 
 #topControl{
@@ -95,6 +130,26 @@ input::-moz-range-thumb {
   text-align: center;
 }
 
+#customP{
+  font-family: 'Kanit', sans-serif;
+  position: absolute;
+  visibility: hidden;
+  top: 50%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 80%;
+  padding: 8px;
+  font-size: 15px;
+  overflow-y: scroll;
+  background-color: #FFFFFF;
+  box-shadow: 0 20px 20px 0 rgba(71, 69, 84, 0.6);
+  border-radius: 3px;
+  list-style: none;
+  transition: all 0.2s ease-in-out;
+  z-index: 10001;
+}
+
 #playlists{
   position: absolute;
   display: flex;
@@ -105,6 +160,16 @@ input::-moz-range-thumb {
 #normal{
   color: #646161;
   border: 1px solid #646161;
+}
+
+.active{
+  color: #646161;
+  border: 1px solid #646161;
+}
+
+.inactive{
+  color: #c6c5c6;
+  border: 1px solid #c2c2c2;
 }
 
 .btnMusic{
@@ -250,6 +315,10 @@ input::-moz-range-thumb {
   img{
     height: 300px;
   }
+
+  #playlists{
+    top: 95%;
+  }
 }
 
 @media(max-height: 580px){
@@ -267,11 +336,11 @@ input::-moz-range-thumb {
   #queueDiv{
     position: absolute;
     top: 43%;
-    left: 10%;
+    left: 60%;
     transform: translate(-50%, -50%);
     z-index: 10000;
     width: 200px;
-    height: 120%;
+    height: 300px;
   }
 
   #queue{
@@ -282,7 +351,7 @@ input::-moz-range-thumb {
     transform: translate(-50%, -50%);
     opacity: 0;
     width: 150px;
-    height: 65%;
+    height: 230px;
   }
 
   .music-container {
