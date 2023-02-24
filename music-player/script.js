@@ -95,7 +95,7 @@ let indieArr = ["Sundial", "Kaleidoskull", "Amnesia Was Her Name", "The Man In S
 "Fire Coming Out Of The Monkey's Head", "Don't Get Lost In Heaven", "Demon Days",
 "Welcome To The World Of The Plastic Beach", "White Flag", "Rhinestone Eyes", "Stylo", "Superfast Jellyfish",
 "Empire Ants", "Glitter Freeze", "Some Kind Of Nature", "On Melancholy Hill", "Broken", 'Sweepstakes', "Plastic Beach", "To Binge",
-'Cloud Of Unknowing',"Pirate Jet", "Humility", "Tranz", "Hollywood", "Kansas", 'Sorcererz', 'Idaho', 'Lake Zurich', 'Magic City', 'Fire Flies', 'One Percent',"Souk Eye", "Cracker Island", "New Gold", 'Skinny Ape'];
+'Cloud Of Unknowing',"Pirate Jet", "Humility", "Tranz", "Hollywood", "Kansas", 'Sorcererz', 'Idaho', 'Lake Zurich', 'Magic City', 'Fire Flies', 'One Percent',"Souk Eye", "Cracker Island", "Oil (ft Stevie Nicks)", "The Tired Influencer", "Silent Running (ft Adeleye Omotayo)", "New Gold", "Baby Queen", "Tarantula", "Tormenta (ft Bad Bunny)", 'Skinny Ape', "Possession Island (ft Beck)"];
 
 let OgIndieArr = ["Sundial", "Kaleidoskull", "Amnesia Was Her Name", "The Man In Stripes & Glasses", "Marketland", "Gadzooks", 'Knife Fight', "The Only House Thats Not On Fire (Yet)" , "The Ocean", "The Afternoon",
 "Spring Heeled Jack", "Being A Rock Star", "The Satirists Love Song","The Machine","Bill Watterson","Something Glowing", "Really Cool Wig", "Two Trucks", "A Mask Of My Own Face", "Everybody Loves Raymond", 
@@ -108,7 +108,7 @@ let OgIndieArr = ["Sundial", "Kaleidoskull", "Amnesia Was Her Name", "The Man In
 "Fire Coming Out Of The Monkey's Head", "Don't Get Lost In Heaven", "Demon Days",
 "Welcome To The World Of The Plastic Beach", "White Flag", "Rhinestone Eyes", "Stylo", "Superfast Jellyfish",
 "Empire Ants", "Glitter Freeze", "Some Kind Of Nature", "On Melancholy Hill", "Broken", 'Sweepstakes', "Plastic Beach", "To Binge",
-'Cloud Of Unknowing',"Pirate Jet", "Humility", "Tranz", "Hollywood", "Kansas", 'Sorcererz', 'Idaho', 'Lake Zurich', 'Magic City', 'Fire Flies', 'One Percent',"Souk Eye", "Cracker Island", "New Gold", 'Skinny Ape'];
+'Cloud Of Unknowing',"Pirate Jet", "Humility", "Tranz", "Hollywood", "Kansas", 'Sorcererz', 'Idaho', 'Lake Zurich', 'Magic City', 'Fire Flies', 'One Percent',"Souk Eye", "Cracker Island", "Oil (ft Stevie Nicks)", "The Tired Influencer", "Silent Running (ft Adeleye Omotayo)", "New Gold", "Baby Queen", "Tarantula", "Tormenta (ft Bad Bunny)", 'Skinny Ape', "Possession Island (ft Beck)"];
 
 let everySong = [
 "Sundial", "Kaleidoskull", "Amnesia Was Her Name", "The Man In Stripes & Glasses", "Marketland", "Gadzooks", 'Knife Fight', "The Only House Thats Not On Fire (Yet)" , "The Ocean", "The Afternoon",
@@ -122,7 +122,7 @@ let everySong = [
 "Fire Coming Out Of The Monkey's Head", "Don't Get Lost In Heaven", "Demon Days",
 "Welcome To The World Of The Plastic Beach", "White Flag", "Rhinestone Eyes", "Stylo", "Superfast Jellyfish",
 "Empire Ants", "Glitter Freeze", "Some Kind Of Nature", "On Melancholy Hill", "Broken", 'Sweepstakes', "Plastic Beach", "To Binge",
-'Cloud Of Unknowing',"Pirate Jet", "Humility", "Tranz", "Hollywood", "Kansas", 'Sorcererz', 'Idaho', 'Lake Zurich', 'Magic City', 'Fire Flies', 'One Percent',"Souk Eye", "Cracker Island", "New Gold", 'Skinny Ape', "Smooth Criminal", "Bad", "Strawberry Fields Forever",
+'Cloud Of Unknowing',"Pirate Jet", "Humility", "Tranz", "Hollywood", "Kansas", 'Sorcererz', 'Idaho', 'Lake Zurich', 'Magic City', 'Fire Flies', 'One Percent',"Souk Eye", "Cracker Island", "Oil (ft Stevie Nicks)", "The Tired Influencer", "Silent Running (ft Adeleye Omotayo)", "New Gold", "Baby Queen", "Tarantula", "Tormenta (ft Bad Bunny)", 'Skinny Ape', "Possession Island (ft Beck)","Smooth Criminal", "Bad", "Strawberry Fields Forever",
 "Penny Lane", "Sgt Pepper's Lonely Hearts Club Band", "Lucy In The Sky With Diamonds", "A Day In A Life",
 "Taxman", "Let It Be", "Come Together", "Because", "Magical Mystery Tour", "Eleanor Rigby", "Help", "Yesterday (Remastered)", "Gangstas Paradise",
 "My Castle Town", "Death By Glamour", 'A Gentle Reminder', 'Akaishi', 'Another Land', 'Answer Me My Love', 'Anthem', 'Constantly Changing',
