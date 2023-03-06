@@ -56,11 +56,11 @@ function createEntry(){
 function saveAA(){
     localStorage.setItem('dreamArray', JSON.stringify(everyEntry));
     if(localStorage.getItem("dreamArray") != null){
-      console.log(`so ${JSON.parse(localStorage.getItem('dreaamArray'))}`)
+      console.log(`so ${JSON.parse(localStorage.getItem('dreamArray'))}`)
     }
   }
 
-if(localStorage.getItem("test") != null){
+if(localStorage.getItem("dreamArray") != null){
     everyEntry = JSON.parse(localStorage.getItem("dreamArray"));
 
     everyEntry.forEach(function(item, index) {
