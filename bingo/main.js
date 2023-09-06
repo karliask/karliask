@@ -28,7 +28,8 @@ let lagegariable = [
   "Referencia",
   "Zoro perdiendose",
   "Momos",
-  "Epic Gaming Moment"
+  "Epic Gaming Moment",
+  "Fruta del Diablo nueva"
 ]
 let element = document.getElementById('card');
 let children = element.children;
