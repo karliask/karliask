@@ -56,11 +56,11 @@ function execute(){
       child.addEventListener('click', () => {
         if(bool == false){
           bool = true;
-          child.style.background = "rgb(81, 0, 0)";
+          child.classList.add('marked');
         }
         else{
           bool = false;
-          child.style.background = "black";
+          child.classList.remove('marked');
         }
         
       })
